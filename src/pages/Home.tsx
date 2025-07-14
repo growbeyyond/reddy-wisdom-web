@@ -226,11 +226,18 @@ const Home = () => {
                   className="w-full h-48 rounded-xl shadow-lg object-cover"
                 />
               </div>
-              <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=350&fit=crop&crop=center" 
-                alt="Medical consultation" 
-                className="w-full h-56 rounded-xl shadow-lg object-cover"
-              />
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=350&fit=crop&crop=center" 
+                  alt="Medical consultation" 
+                  className="w-full h-48 rounded-xl shadow-lg object-cover"
+                />
+                <img 
+                  src="/lovable-uploads/c188e20e-ba2c-4652-93f2-6297055eebad.png"
+                  alt="Dr. Namratha Sai Reddy - American Oncology Institute Welcome Card"
+                  className="w-full h-48 rounded-xl shadow-lg object-contain bg-white p-2"
+                />
+              </div>
             </div>
             
             <div className="order-1 lg:order-2 space-y-6">
