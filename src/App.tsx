@@ -6,18 +6,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import WhatsAppWidget from "./components/WhatsAppWidget";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import Education from "./pages/Education";
-import BlogPost from "./pages/BlogPost";
-import SymptomChecker from "./pages/SymptomChecker";
-import RiskAssessment from "./pages/RiskAssessment";
-import Contact from "./pages/Contact";
-import PatientPortal from "./pages/PatientPortal";
-import BookAppointment from "./pages/BookAppointment";
-import TreatmentTimeline from "./components/TreatmentTimeline";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+
+// Lazy load pages for better performance
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const Education = lazy(() => import("./pages/Education"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
+const SymptomChecker = lazy(() => import("./pages/SymptomChecker"));
+const RiskAssessment = lazy(() => import("./pages/RiskAssessment"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PatientPortal = lazy(() => import("./pages/PatientPortal"));
+const BookAppointment = lazy(() => import("./pages/BookAppointment"));
+const TreatmentTimeline = lazy(() => import("./components/TreatmentTimeline"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient();
 
@@ -30,21 +33,27 @@ const App = () => (
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/education/blog/:id" element={<BlogPost />} />
-              <Route path="/tools/symptom-checker" element={<SymptomChecker />} />
-              <Route path="/tools/risk-assessment" element={<RiskAssessment />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/patient-portal" element={<PatientPortal />} />
-              <Route path="/book-appointment" element={<BookAppointment />} />
-              <Route path="/treatment-timeline" element={<TreatmentTimeline />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+              </div>
+            }>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/education/blog/:id" element={<BlogPost />} />
+                <Route path="/tools/symptom-checker" element={<SymptomChecker />} />
+                <Route path="/tools/risk-assessment" element={<RiskAssessment />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/patient-portal" element={<PatientPortal />} />
+                <Route path="/book-appointment" element={<BookAppointment />} />
+                <Route path="/treatment-timeline" element={<TreatmentTimeline />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Suspense>
           </main>
           <Footer />
           <WhatsAppWidget />
