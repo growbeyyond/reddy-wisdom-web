@@ -16,15 +16,21 @@ const Footer = () => {
               compassionate cancer care with the latest treatment advancements.
             </p>
             <div className="flex space-x-4">
-              <Button variant="ghost" size="icon">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button variant="ghost" size="icon">
-                <Twitter className="h-4 w-4" />
-              </Button>
+              <a href="https://www.facebook.com/profile.php?id=61576557545109" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover:text-primary">
+                  <Facebook className="h-4 w-4" />
+                </Button>
+              </a>
+              <a href="https://www.instagram.com/drbijivemulanamratha/" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover:text-primary">
+                  <Instagram className="h-4 w-4" />
+                </Button>
+              </a>
+              <a href="https://x.com/Dr_Bijivemula" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon" className="hover:text-primary">
+                  <Twitter className="h-4 w-4" />
+                </Button>
+              </a>
             </div>
           </div>
 

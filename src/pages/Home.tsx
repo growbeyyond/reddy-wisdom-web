@@ -92,10 +92,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
+              <a href="https://www.americanoncology.com/bookanappointment?dr=dr-b-namratha-sai-reddy&location=Hyderabad&spe=medical-oncology" target="_blank" rel="noopener noreferrer">
                 <Button variant="appointment" size="hero" className="animate-scale-in">
                   <Calendar className="h-5 w-5 mr-2" />
                   Schedule Consultation
                 </Button>
+              </a>
                 <Button variant="outline" size="hero" className="animate-scale-in">
                   <Phone className="h-5 w-5 mr-2" />
                   Second Opinion

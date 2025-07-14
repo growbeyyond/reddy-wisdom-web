@@ -52,10 +52,12 @@ const Navigation = () => {
               <Phone className="h-4 w-4" />
               <span className="hidden xl:inline">+91 91556 67758</span>
             </Button>
-            <Button variant="appointment" size="sm" className="flex items-center gap-2">
-              <Calendar className="h-4 w-4" />
-              Book Appointment
-            </Button>
+            <a href="https://www.americanoncology.com/bookanappointment?dr=dr-b-namratha-sai-reddy&location=Hyderabad&spe=medical-oncology" target="_blank" rel="noopener noreferrer">
+              <Button variant="appointment" size="sm" className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                Book Appointment
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -90,10 +92,12 @@ const Navigation = () => {
                   <Phone className="h-4 w-4 mr-2" />
                   Call +91 91556 67758
                 </Button>
-                <Button variant="appointment" size="sm" className="justify-center">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  Book Appointment
-                </Button>
+                <a href="https://www.americanoncology.com/bookanappointment?dr=dr-b-namratha-sai-reddy&location=Hyderabad&spe=medical-oncology" target="_blank" rel="noopener noreferrer">
+                  <Button variant="appointment" size="sm" className="justify-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Book Appointment
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
