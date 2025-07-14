@@ -213,31 +213,12 @@ const Home = () => {
       <section className="section-padding bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <img 
-                  src={doctorClinic} 
-                  alt="Dr. Namratha in clinic" 
-                  className="w-full h-48 rounded-xl shadow-lg object-cover"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400&h=300&fit=crop&crop=center" 
-                  alt="Modern consultation room" 
-                  className="w-full h-48 rounded-xl shadow-lg object-cover"
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=350&fit=crop&crop=center" 
-                  alt="Medical consultation" 
-                  className="w-full h-48 rounded-xl shadow-lg object-cover"
-                />
-                <img 
-                  src="/lovable-uploads/c188e20e-ba2c-4652-93f2-6297055eebad.png"
-                  alt="Dr. Namratha Sai Reddy - American Oncology Institute Welcome Card"
-                  className="w-full h-48 rounded-xl shadow-lg object-contain bg-white p-2"
-                />
-              </div>
+            <div className="order-2 lg:order-1">
+              <img 
+                src="/lovable-uploads/c188e20e-ba2c-4652-93f2-6297055eebad.png"
+                alt="Dr. Namratha Sai Reddy - American Oncology Institute Welcome Card"
+                className="w-full h-auto rounded-xl shadow-lg object-contain bg-white p-4"
+              />
             </div>
             
             <div className="order-1 lg:order-2 space-y-6">
