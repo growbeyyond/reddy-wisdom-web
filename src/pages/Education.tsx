@@ -34,7 +34,7 @@ const Education = () => {
       excerpt: "Discover how immunotherapy is changing cancer treatment outcomes and what patients need to know about this breakthrough therapy.",
       category: "Treatment Updates", 
       readTime: "8 min read",
-      publishDate: "Dec 15, 2024",
+      publishDate: "June 15, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
       featured: true,
@@ -46,7 +46,7 @@ const Education = () => {
       excerpt: "Essential screening guidelines, self-examination techniques, and lifestyle factors that can significantly reduce breast cancer risk.",
       category: "Breast Cancer",
       readTime: "6 min read", 
-      publishDate: "Dec 12, 2024",
+      publishDate: "June 20, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop",
       featured: true
@@ -57,7 +57,7 @@ const Education = () => {
       excerpt: "Complete nutritional guide for cancer patients, including foods to eat, avoid, and how to manage treatment side effects through diet.",
       category: "Nutrition",
       readTime: "10 min read",
-      publishDate: "Dec 10, 2024", 
+      publishDate: "June 25, 2025", 
       author: "Dr. Namratha Sai Reddy",
       image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop",
       featured: true
@@ -68,7 +68,7 @@ const Education = () => {
       excerpt: "Comprehensive guide to lung cancer types, symptoms, risk factors, and modern treatment approaches including targeted therapy.",
       category: "Lung Cancer",
       readTime: "12 min read",
-      publishDate: "Dec 8, 2024",
+      publishDate: "July 1, 2025",
       author: "Dr. Namratha Sai Reddy", 
       image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop"
     },
@@ -78,7 +78,7 @@ const Education = () => {
       excerpt: "Practical strategies to cope with common side effects of chemotherapy, radiation, and immunotherapy treatments.",
       category: "Treatment Updates",
       readTime: "9 min read",
-      publishDate: "Dec 5, 2024",
+      publishDate: "July 5, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop"
     },
@@ -88,7 +88,7 @@ const Education = () => {
       excerpt: "Understanding the psychological impact of cancer diagnosis and practical ways to maintain mental wellness during treatment.",
       category: "Mental Health",
       readTime: "7 min read",
-      publishDate: "Dec 3, 2024",
+      publishDate: "July 10, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=300&fit=crop"
     }
