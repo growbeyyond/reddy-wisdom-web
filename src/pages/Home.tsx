@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Link } from 'react-router-dom';
 import { 
   Calendar, 
   Phone, 
@@ -15,6 +16,8 @@ import {
 } from 'lucide-react';
 import doctorProfile from '@/assets/doctor-profile.png';
 import doctorClinic from '@/assets/doctor-clinic.jpg';
+import consultationRoom from '@/assets/consultation-room.jpg';
+import doctorConsultation from '@/assets/doctor-consultation.jpg';
 
 const Home = () => {
   const achievements = [
@@ -208,11 +211,23 @@ const Home = () => {
       <section className="section-padding bg-gradient-to-r from-primary/5 to-accent/5">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <img 
+                  src={doctorClinic} 
+                  alt="Dr. Namratha in clinic" 
+                  className="w-full h-48 rounded-xl shadow-lg object-cover"
+                />
+                <img 
+                  src={consultationRoom} 
+                  alt="Modern consultation room" 
+                  className="w-full h-48 rounded-xl shadow-lg object-cover"
+                />
+              </div>
               <img 
-                src={doctorClinic} 
-                alt="Dr. Namratha in clinic" 
-                className="w-full rounded-2xl shadow-2xl"
+                src={doctorConsultation} 
+                alt="Medical consultation" 
+                className="w-full h-56 rounded-xl shadow-lg object-cover"
               />
             </div>
             
@@ -244,9 +259,11 @@ const Home = () => {
                 </li>
               </ul>
               
-              <Button variant="default" size="lg">
-                Learn More About Dr. Namratha
-              </Button>
+              <Link to="/about">
+                <Button variant="default" size="lg">
+                  Learn More About Dr. Namratha
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
