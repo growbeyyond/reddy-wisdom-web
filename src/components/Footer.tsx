@@ -85,7 +85,14 @@ const Footer = () => {
           <p className="text-muted-foreground text-sm">
             © 2024 Dr. Namratha Sai Reddy. All rights reserved. 
             <span className="ml-2">
-              Website developed with care for better patient experience.
+              Developed by <a 
+                href="https://www.growbeyyond.in" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                Grow Beyond
+              </a>
             </span>
           </p>
         </div>
