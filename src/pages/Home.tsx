@@ -295,15 +295,36 @@ const Home = () => {
             Don't wait to get the expert cancer care you deserve. Schedule a consultation 
             today and take the first step towards better health.
           </p>
+          
+          {/* Prominent Phone Number Display */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-white/20">
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex items-center gap-3">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Phone className="h-6 w-6 text-white" />
+                </div>
+                <div className="text-left">
+                  <div className="text-white/80 text-sm">Call Dr. Namratha Now</div>
+                  <div className="text-white text-2xl font-bold tracking-wider">+91 91556 67758</div>
+                  <div className="text-white/70 text-sm">Available 24/7 for emergencies</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="hero">
-              <Calendar className="h-5 w-5 mr-2" />
-              Book Appointment
-            </Button>
-            <Button variant="outline" size="hero" className="border-white text-white hover:bg-white hover:text-primary">
-              <Phone className="h-5 w-5 mr-2" />
-              Call +91 91556 67758
-            </Button>
+            <a href="https://www.americanoncology.com/bookanappointment?dr=dr-b-namratha-sai-reddy&location=Hyderabad&spe=medical-oncology" target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" size="hero">
+                <Calendar className="h-5 w-5 mr-2" />
+                Book Appointment
+              </Button>
+            </a>
+            <a href="tel:+919155667758">
+              <Button variant="outline" size="hero" className="border-white text-white hover:bg-white hover:text-primary">
+                <Phone className="h-5 w-5 mr-2" />
+                Call Now
+              </Button>
+            </a>
           </div>
         </div>
       </section>
