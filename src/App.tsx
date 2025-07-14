@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Education from "./pages/Education";
 import BlogPost from "./pages/BlogPost";
+import SymptomChecker from "./pages/SymptomChecker";
 import RiskAssessment from "./pages/RiskAssessment";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
