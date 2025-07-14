@@ -13,8 +13,6 @@ const Navigation = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Cancer Education', href: '/education' },
-    { name: 'Patient Stories', href: '/stories' },
-    { name: 'Research', href: '/research' },
     { name: 'Patient Portal', href: '/patient-portal' },
     { name: 'Contact', href: '/contact' },
   ];

@@ -41,8 +41,6 @@ const Footer = () => {
               <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Dr. Namratha</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link></li>
               <li><Link to="/education" className="text-muted-foreground hover:text-primary transition-colors">Cancer Education</Link></li>
-              <li><Link to="/stories" className="text-muted-foreground hover:text-primary transition-colors">Patient Stories</Link></li>
-              <li><Link to="/research" className="text-muted-foreground hover:text-primary transition-colors">Research</Link></li>
               <li><Link to="/patient-portal" className="text-muted-foreground hover:text-primary transition-colors">Patient Portal</Link></li>
             </ul>
           </div>
