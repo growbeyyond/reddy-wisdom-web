@@ -54,6 +54,17 @@ const PatientPortal = () => {
     { id: 3, name: 'Ondansetron', dosage: '8mg', frequency: 'As needed', time: '12:00', taken: false }
   ]);
 
+  // New Medication Form State
+  const [newMedication, setNewMedication] = useState({
+    name: '',
+    dosage: '',
+    frequency: '',
+    time: ''
+  });
+
+  // Screen Share State
+  const [isScreenSharing, setIsScreenSharing] = useState(false);
+
   // Nutrition Tracker State
   const [dailyNutrition, setDailyNutrition] = useState({
     calories: 1850,
@@ -132,9 +143,83 @@ const PatientPortal = () => {
     setIsVideoCallActive(false);
     setIsMuted(false);
     setIsVideoOff(false);
+    setIsScreenSharing(false);
     toast({
       title: "Video Call Ended",
       description: "Thank you for using our telemedicine service.",
+    });
+  };
+
+  const handleJoinOnline = () => {
+    setActiveTab('telemedicine');
+    toast({
+      title: "Redirecting to Video Call",
+      description: "Switching to video consultation tab...",
+    });
+  };
+
+  const handleReschedule = () => {
+    setActiveTab('appointments');
+    toast({
+      title: "Reschedule Appointment",
+      description: "Please select a new date and time below.",
+    });
+  };
+
+  const toggleScreenShare = () => {
+    setIsScreenSharing(!isScreenSharing);
+    toast({
+      title: isScreenSharing ? "Screen Share Stopped" : "Screen Share Started",
+      description: isScreenSharing ? "You are no longer sharing your screen." : "You are now sharing your screen.",
+    });
+  };
+
+  const handleDownloadDocument = (docName: string) => {
+    toast({
+      title: "Download Started",
+      description: `Downloading ${docName}...`,
+    });
+    // Simulate download
+    setTimeout(() => {
+      toast({
+        title: "Download Complete",
+        description: `${docName} has been downloaded to your device.`,
+      });
+    }, 2000);
+  };
+
+  const addNewMedication = () => {
+    if (!newMedication.name || !newMedication.dosage || !newMedication.frequency || !newMedication.time) {
+      toast({
+        title: "Incomplete Information",
+        description: "Please fill in all medication details.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    const newMed = {
+      id: medications.length + 1,
+      name: newMedication.name,
+      dosage: newMedication.dosage,
+      frequency: newMedication.frequency,
+      time: newMedication.time,
+      taken: false
+    };
+
+    setMedications(prev => [...prev, newMed]);
+    setNewMedication({ name: '', dosage: '', frequency: '', time: '' });
+    
+    toast({
+      title: "Medication Added",
+      description: `${newMedication.name} has been added to your medication list.`,
+    });
+  };
+
+  const handleNotifications = () => {
+    toast({
+      title: "Notifications",
+      description: "You have 3 new notifications: 1 appointment reminder, 1 lab result, 1 medication refill needed.",
     });
   };
 
@@ -153,7 +238,7 @@ const PatientPortal = () => {
                 <Activity className="h-4 w-4" />
                 Active Patient
               </Badge>
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" onClick={handleNotifications}>
                 <Bell className="h-4 w-4 mr-2" />
                 Notifications (3)
               </Button>
@@ -333,11 +418,11 @@ const PatientPortal = () => {
                       <p className="text-sm text-muted-foreground">Dr. Namratha Sai Reddy</p>
                     </div>
                     <div className="flex gap-2">
-                      <Button variant="outline" size="sm">
+                      <Button variant="outline" size="sm" onClick={handleJoinOnline}>
                         <Video className="h-4 w-4 mr-2" />
                         Join Online
                       </Button>
-                      <Button variant="outline" size="sm">Reschedule</Button>
+                      <Button variant="outline" size="sm" onClick={handleReschedule}>Reschedule</Button>
                     </div>
                   </div>
                 </div>
@@ -386,7 +471,11 @@ const PatientPortal = () => {
                         >
                           {isVideoOff ? <VideoOff className="h-4 w-4" /> : <Video className="h-4 w-4" />}
                         </Button>
-                        <Button variant="secondary" size="sm">
+                        <Button 
+                          variant={isScreenSharing ? "destructive" : "secondary"} 
+                          size="sm"
+                          onClick={toggleScreenShare}
+                        >
                           <Share2 className="h-4 w-4" />
                         </Button>
                         <Button variant="destructive" size="sm" onClick={endVideoCall}>
@@ -438,9 +527,9 @@ const PatientPortal = () => {
                           <FileText className="h-5 w-5 text-muted-foreground" />
                           <span className="text-sm">{file.name}</span>
                         </div>
-                        <Button variant="ghost" size="sm">
-                          <Download className="h-4 w-4" />
-                        </Button>
+                      <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(file.name)}>
+                        <Download className="h-4 w-4" />
+                      </Button>
                       </div>
                     ))}
                   </div>
@@ -468,9 +557,9 @@ const PatientPortal = () => {
                           <p className="text-xs text-muted-foreground">{doc.type} • {doc.date}</p>
                         </div>
                       </div>
-                      <Button variant="ghost" size="sm">
-                        <Download className="h-4 w-4" />
-                      </Button>
+                    <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(doc.name)}>
+                      <Download className="h-4 w-4" />
+                    </Button>
                     </div>
                   ))}
                 </div>
@@ -516,12 +605,33 @@ const PatientPortal = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 gap-4">
-                  <input className="p-3 border rounded-lg" placeholder="Medication name" />
-                  <input className="p-3 border rounded-lg" placeholder="Dosage" />
-                  <input className="p-3 border rounded-lg" placeholder="Frequency" />
-                  <input className="p-3 border rounded-lg" placeholder="Time" type="time" />
+                  <input 
+                    className="p-3 border rounded-lg" 
+                    placeholder="Medication name"
+                    value={newMedication.name}
+                    onChange={(e) => setNewMedication(prev => ({...prev, name: e.target.value}))}
+                  />
+                  <input 
+                    className="p-3 border rounded-lg" 
+                    placeholder="Dosage"
+                    value={newMedication.dosage}
+                    onChange={(e) => setNewMedication(prev => ({...prev, dosage: e.target.value}))}
+                  />
+                  <input 
+                    className="p-3 border rounded-lg" 
+                    placeholder="Frequency"
+                    value={newMedication.frequency}
+                    onChange={(e) => setNewMedication(prev => ({...prev, frequency: e.target.value}))}
+                  />
+                  <input 
+                    className="p-3 border rounded-lg" 
+                    placeholder="Time" 
+                    type="time"
+                    value={newMedication.time}
+                    onChange={(e) => setNewMedication(prev => ({...prev, time: e.target.value}))}
+                  />
                 </div>
-                <Button className="w-full mt-4">
+                <Button className="w-full mt-4" onClick={addNewMedication}>
                   <Plus className="h-4 w-4 mr-2" />
                   Add Medication
                 </Button>
