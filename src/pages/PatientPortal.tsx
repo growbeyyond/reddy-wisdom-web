@@ -151,11 +151,7 @@ const PatientPortal = () => {
   };
 
   const handleJoinOnline = () => {
-    setActiveTab('telemedicine');
-    toast({
-      title: "Redirecting to Video Call",
-      description: "Switching to video consultation tab...",
-    });
+    window.location.href = '/book-appointment';
   };
 
   const handleReschedule = () => {

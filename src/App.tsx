@@ -15,6 +15,7 @@ import SymptomChecker from "./pages/SymptomChecker";
 import RiskAssessment from "./pages/RiskAssessment";
 import Contact from "./pages/Contact";
 import PatientPortal from "./pages/PatientPortal";
+import BookAppointment from "./pages/BookAppointment";
 import TreatmentTimeline from "./components/TreatmentTimeline";
 import NotFound from "./pages/NotFound";
 
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/tools/risk-assessment" element={<RiskAssessment />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/patient-portal" element={<PatientPortal />} />
+              <Route path="/book-appointment" element={<BookAppointment />} />
               <Route path="/treatment-timeline" element={<TreatmentTimeline />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
