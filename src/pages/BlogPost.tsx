@@ -43,11 +43,11 @@ const BlogPost = () => {
             content: "There are several types of immunotherapy currently available:",
             type: "list",
             items: [
-              "**Checkpoint Inhibitors**: These drugs block proteins that prevent immune cells from attacking cancer cells.",
-              "**CAR-T Cell Therapy**: Modified immune cells are created in the lab and infused back into the patient.",
-              "**Monoclonal Antibodies**: Lab-made antibodies that target specific cancer cell proteins.",
-              "**Cancer Vaccines**: Vaccines that help the immune system recognize and attack cancer cells.",
-              "**Cytokines**: Proteins that boost the immune system's response to cancer."
+              "Checkpoint Inhibitors: These drugs block proteins that prevent immune cells from attacking cancer cells.",
+              "CAR-T Cell Therapy: Modified immune cells are created in the lab and infused back into the patient.",
+              "Monoclonal Antibodies: Lab-made antibodies that target specific cancer cell proteins.",
+              "Cancer Vaccines: Vaccines that help the immune system recognize and attack cancer cells.",
+              "Cytokines: Proteins that boost the immune system's response to cancer."
             ]
           },
           {
@@ -116,11 +116,11 @@ const BlogPost = () => {
             content: "While we cannot change some risk factors, understanding them helps in making informed decisions about prevention and screening:",
             type: "info",
             items: [
-              "**Age**: Risk increases with age, especially after 50",
-              "**Family History**: Having relatives with breast or ovarian cancer",
-              "**Genetic Mutations**: BRCA1 and BRCA2 gene mutations",
-              "**Personal History**: Previous breast cancer or certain benign breast conditions",
-              "**Lifestyle Factors**: Diet, exercise, alcohol consumption, and weight"
+              "Age: Risk increases with age, especially after 50",
+              "Family History: Having relatives with breast or ovarian cancer",
+              "Genetic Mutations: BRCA1 and BRCA2 gene mutations",
+              "Personal History: Previous breast cancer or certain benign breast conditions",
+              "Lifestyle Factors: Diet, exercise, alcohol consumption, and weight"
             ]
           },
           {
@@ -128,11 +128,11 @@ const BlogPost = () => {
             content: "Regular screening is crucial for early detection. Here are the current recommendations:",
             type: "success",
             items: [
-              "**Ages 20-39**: Monthly self-exams, clinical breast exams every 1-3 years",
-              "**Ages 40-49**: Annual mammograms (discuss with your doctor)",
-              "**Ages 50-74**: Annual mammograms are strongly recommended", 
-              "**75+**: Discuss continued screening with your healthcare provider",
-              "**High Risk**: May need earlier or more frequent screening"
+              "Ages 20-39: Monthly self-exams, clinical breast exams every 1-3 years",
+              "Ages 40-49: Annual mammograms (discuss with your doctor)",
+              "Ages 50-74: Annual mammograms are strongly recommended", 
+              "75+: Discuss continued screening with your healthcare provider",
+              "High Risk: May need earlier or more frequent screening"
             ]
           },
           {
@@ -140,11 +140,11 @@ const BlogPost = () => {
             content: "Monthly breast self-exams help you become familiar with your breasts and notice changes:",
             type: "highlight",
             steps: [
-              "**Visual Inspection**: Look for changes in size, shape, or skin texture",
-              "**Manual Examination**: Feel for lumps using circular motions",
-              "**Check Different Positions**: Lying down, standing, and in the shower",
-              "**Include the Armpit**: Check lymph nodes in the armpit area",
-              "**Note Any Changes**: Report unusual findings to your doctor immediately"
+              "Visual Inspection: Look for changes in size, shape, or skin texture",
+              "Manual Examination: Feel for lumps using circular motions",
+              "Check Different Positions: Lying down, standing, and in the shower",
+              "Include the Armpit: Check lymph nodes in the armpit area",
+              "Note Any Changes: Report unusual findings to your doctor immediately"
             ]
           },
           {
