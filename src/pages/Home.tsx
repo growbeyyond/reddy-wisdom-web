@@ -200,9 +200,11 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-8">
-            <Button variant="outline" size="lg">
-              View All Services
-            </Button>
+            <Link to="/services">
+              <Button variant="outline" size="lg">
+                View All Services
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -219,13 +221,13 @@ const Home = () => {
                   className="w-full h-48 rounded-xl shadow-lg object-cover"
                 />
                 <img 
-                  src={consultationRoom} 
+                  src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=400&h=300&fit=crop&crop=center" 
                   alt="Modern consultation room" 
                   className="w-full h-48 rounded-xl shadow-lg object-cover"
                 />
               </div>
               <img 
-                src={doctorConsultation} 
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=350&fit=crop&crop=center" 
                 alt="Medical consultation" 
                 className="w-full h-56 rounded-xl shadow-lg object-cover"
               />
