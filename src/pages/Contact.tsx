@@ -13,6 +13,7 @@ import {
   MessageSquare,
   Navigation as LocationIcon
 } from 'lucide-react';
+import americanOncologyImage from '@/assets/american-oncology-institute.jpg';
 
 const Contact = () => {
   const contactInfo = [
@@ -244,6 +245,13 @@ const Contact = () => {
                 </h2>
                 <Card className="medical-card">
                   <CardContent className="p-6">
+                    <div className="mb-4">
+                      <img 
+                        src={americanOncologyImage} 
+                        alt="American Oncology Institute Building" 
+                        className="w-full h-48 object-cover rounded-lg"
+                      />
+                    </div>
                     <div className="flex items-start gap-4">
                       <div className="healing-gradient w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                         <LocationIcon className="h-6 w-6 text-primary" />
