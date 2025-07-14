@@ -313,7 +313,7 @@ const Contact = () => {
               <MessageSquare className="h-5 w-5 mr-2" />
               Common Questions
             </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
+            <Button variant="secondary" size="lg" className="bg-white text-primary hover:bg-white/90">
               <Calendar className="h-5 w-5 mr-2" />
               Prepare for Your Visit
             </Button>
