@@ -224,19 +224,20 @@ const PatientPortal = () => {
       {/* Header */}
       <section className="bg-gradient-to-r from-primary/10 to-accent/10 py-8">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <h1 className="text-3xl font-heading font-bold text-foreground">Patient Portal</h1>
-              <p className="text-muted-foreground mt-2">Your comprehensive healthcare management center</p>
+              <h1 className="text-2xl sm:text-3xl font-heading font-bold text-foreground">Patient Portal</h1>
+              <p className="text-muted-foreground mt-2 text-sm sm:text-base">Your comprehensive healthcare management center</p>
             </div>
-            <div className="flex items-center gap-4">
-              <Badge variant="outline" className="flex items-center gap-2">
-                <Activity className="h-4 w-4" />
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 w-full sm:w-auto">
+              <Badge variant="outline" className="flex items-center gap-2 text-xs sm:text-sm">
+                <Activity className="h-3 w-3 sm:h-4 sm:w-4" />
                 Active Patient
               </Badge>
-              <Button variant="outline" size="sm" onClick={handleNotifications}>
-                <Bell className="h-4 w-4 mr-2" />
-                Notifications (3)
+              <Button variant="outline" size="sm" onClick={handleNotifications} className="text-xs sm:text-sm">
+                <Bell className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                <span className="hidden sm:inline">Notifications (3)</span>
+                <span className="sm:hidden">(3)</span>
               </Button>
             </div>
           </div>
@@ -245,13 +246,31 @@ const PatientPortal = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
-          <TabsList className="grid w-full grid-cols-6">
-            <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-            <TabsTrigger value="appointments">Appointments</TabsTrigger>
-            <TabsTrigger value="telemedicine">Video Calls</TabsTrigger>
-            <TabsTrigger value="documents">Documents</TabsTrigger>
-            <TabsTrigger value="medications">Medications</TabsTrigger>
-            <TabsTrigger value="nutrition">Nutrition</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1 h-auto p-1">
+            <TabsTrigger value="dashboard" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Dashboard</span>
+              <span className="sm:hidden">Home</span>
+            </TabsTrigger>
+            <TabsTrigger value="appointments" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Appointments</span>
+              <span className="sm:hidden">Appts</span>
+            </TabsTrigger>
+            <TabsTrigger value="telemedicine" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Video Calls</span>
+              <span className="sm:hidden">Video</span>
+            </TabsTrigger>
+            <TabsTrigger value="documents" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Documents</span>
+              <span className="sm:hidden">Docs</span>
+            </TabsTrigger>
+            <TabsTrigger value="medications" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Medications</span>
+              <span className="sm:hidden">Meds</span>
+            </TabsTrigger>
+            <TabsTrigger value="nutrition" className="text-xs sm:text-sm p-2">
+              <span className="hidden sm:inline">Nutrition</span>
+              <span className="sm:hidden">Diet</span>
+            </TabsTrigger>
           </TabsList>
 
           {/* Dashboard Tab */}
@@ -379,13 +398,14 @@ const PatientPortal = () => {
 
                 <div>
                   <label className="block text-sm font-medium mb-2">Available Time Slots</label>
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
                     {timeSlots.map(time => (
                       <Button
                         key={time}
                         variant={selectedTime === time ? "default" : "outline"}
                         size="sm"
                         onClick={() => setSelectedTime(time)}
+                        className="text-xs sm:text-sm p-2"
                       >
                         {time}
                       </Button>
@@ -407,18 +427,22 @@ const PatientPortal = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 border rounded-lg">
-                    <div>
-                      <p className="font-medium">Follow-up Consultation</p>
-                      <p className="text-sm text-muted-foreground">July 25, 2025 at 10:00 AM</p>
-                      <p className="text-sm text-muted-foreground">Dr. Namratha Sai Reddy</p>
+                  <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 border rounded-lg gap-4">
+                    <div className="flex-1">
+                      <p className="font-medium text-sm sm:text-base">Follow-up Consultation</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">July 25, 2025 at 10:00 AM</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Dr. Namratha Sai Reddy</p>
                     </div>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm" onClick={handleJoinOnline}>
-                        <Video className="h-4 w-4 mr-2" />
-                        Join Online
+                    <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+                      <Button variant="outline" size="sm" onClick={handleJoinOnline} className="text-xs sm:text-sm">
+                        <Video className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
+                        <span className="hidden sm:inline">Join Online</span>
+                        <span className="sm:hidden">Join</span>
                       </Button>
-                      <Button variant="outline" size="sm" onClick={handleReschedule}>Reschedule</Button>
+                      <Button variant="outline" size="sm" onClick={handleReschedule} className="text-xs sm:text-sm">
+                        <span className="hidden sm:inline">Reschedule</span>
+                        <span className="sm:hidden">Reschedule</span>
+                      </Button>
                     </div>
                   </div>
                 </div>
@@ -446,40 +470,44 @@ const PatientPortal = () => {
                     </Button>
                   </div>
                 ) : (
-                  <div className="space-y-4">
-                    <div className="bg-black rounded-lg aspect-video flex items-center justify-center relative">
-                      <div className="text-white text-center">
-                        <Camera className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                        <p className="opacity-75">Video Call in Progress</p>
-                      </div>
-                      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                        <Button 
-                          variant={isMuted ? "destructive" : "secondary"}
-                          size="sm"
-                          onClick={() => setIsMuted(!isMuted)}
-                        >
-                          {isMuted ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
-                        </Button>
-                        <Button 
-                          variant={isVideoOff ? "destructive" : "secondary"}
-                          size="sm"
-                          onClick={() => setIsVideoOff(!isVideoOff)}
-                        >
-                          {isVideoOff ? <VideoOff className="h-4 w-4" /> : <Video className="h-4 w-4" />}
-                        </Button>
-                        <Button 
-                          variant={isScreenSharing ? "destructive" : "secondary"} 
-                          size="sm"
-                          onClick={toggleScreenShare}
-                        >
-                          <Share2 className="h-4 w-4" />
-                        </Button>
-                        <Button variant="destructive" size="sm" onClick={endVideoCall}>
-                          End Call
-                        </Button>
+                    <div className="space-y-4">
+                      <div className="bg-black rounded-lg aspect-video flex items-center justify-center relative">
+                        <div className="text-white text-center">
+                          <Camera className="h-8 w-8 sm:h-16 sm:w-16 mx-auto mb-2 sm:mb-4 opacity-50" />
+                          <p className="opacity-75 text-sm sm:text-base">Video Call in Progress</p>
+                        </div>
+                        <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex gap-1 sm:gap-2">
+                          <Button 
+                            variant={isMuted ? "destructive" : "secondary"}
+                            size="sm"
+                            onClick={() => setIsMuted(!isMuted)}
+                            className="p-2"
+                          >
+                            {isMuted ? <MicOff className="h-3 w-3 sm:h-4 sm:w-4" /> : <Mic className="h-3 w-3 sm:h-4 sm:w-4" />}
+                          </Button>
+                          <Button 
+                            variant={isVideoOff ? "destructive" : "secondary"}
+                            size="sm"
+                            onClick={() => setIsVideoOff(!isVideoOff)}
+                            className="p-2"
+                          >
+                            {isVideoOff ? <VideoOff className="h-3 w-3 sm:h-4 sm:w-4" /> : <Video className="h-3 w-3 sm:h-4 sm:w-4" />}
+                          </Button>
+                          <Button 
+                            variant={isScreenSharing ? "destructive" : "secondary"} 
+                            size="sm"
+                            onClick={toggleScreenShare}
+                            className="p-2"
+                          >
+                            <Share2 className="h-3 w-3 sm:h-4 sm:w-4" />
+                          </Button>
+                          <Button variant="destructive" size="sm" onClick={endVideoCall} className="text-xs sm:text-sm p-2">
+                            <span className="hidden sm:inline">End Call</span>
+                            <span className="sm:hidden">End</span>
+                          </Button>
+                        </div>
                       </div>
                     </div>
-                  </div>
                 )}
               </CardContent>
             </Card>
@@ -516,16 +544,16 @@ const PatientPortal = () => {
 
                 {uploadedFiles.length > 0 && (
                   <div className="space-y-2">
-                    <h4 className="font-medium">Uploaded Files:</h4>
+                    <h4 className="font-medium text-sm sm:text-base">Uploaded Files:</h4>
                     {uploadedFiles.map((file, index) => (
-                      <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
-                        <div className="flex items-center gap-3">
-                          <FileText className="h-5 w-5 text-muted-foreground" />
-                          <span className="text-sm">{file.name}</span>
+                      <div key={index} className="flex items-center justify-between p-3 border rounded-lg gap-2">
+                        <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+                          <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground flex-shrink-0" />
+                          <span className="text-xs sm:text-sm truncate">{file.name}</span>
                         </div>
-                      <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(file.name)}>
-                        <Download className="h-4 w-4" />
-                      </Button>
+                        <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(file.name)} className="flex-shrink-0 p-2">
+                          <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                        </Button>
                       </div>
                     ))}
                   </div>
@@ -545,17 +573,17 @@ const PatientPortal = () => {
                     { name: 'CT Scan Report - June 2025', date: '2025-06-28', type: 'Imaging' },
                     { name: 'Treatment Plan Update', date: '2025-06-25', type: 'Treatment' }
                   ].map((doc, index) => (
-                    <div key={index} className="flex items-center justify-between p-3 border rounded-lg">
-                      <div className="flex items-center gap-3">
-                        <FileText className="h-5 w-5 text-primary" />
-                        <div>
-                          <p className="font-medium text-sm">{doc.name}</p>
+                    <div key={index} className="flex items-center justify-between p-3 border rounded-lg gap-2">
+                      <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+                        <FileText className="h-4 w-4 sm:h-5 sm:w-5 text-primary flex-shrink-0" />
+                        <div className="min-w-0 flex-1">
+                          <p className="font-medium text-xs sm:text-sm truncate">{doc.name}</p>
                           <p className="text-xs text-muted-foreground">{doc.type} • {doc.date}</p>
                         </div>
                       </div>
-                    <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(doc.name)}>
-                      <Download className="h-4 w-4" />
-                    </Button>
+                      <Button variant="ghost" size="sm" onClick={() => handleDownloadDocument(doc.name)} className="flex-shrink-0 p-2">
+                        <Download className="h-3 w-3 sm:h-4 sm:w-4" />
+                      </Button>
                     </div>
                   ))}
                 </div>
@@ -572,19 +600,20 @@ const PatientPortal = () => {
               <CardContent>
                 <div className="space-y-4">
                   {medications.map((med) => (
-                    <div key={med.id} className="flex items-center justify-between p-4 border rounded-lg">
-                      <div className="flex items-center gap-4">
-                        <div className={`w-4 h-4 rounded-full ${med.taken ? 'bg-green-500' : 'bg-gray-300'}`} />
-                        <div>
-                          <p className="font-medium">{med.name}</p>
-                          <p className="text-sm text-muted-foreground">{med.dosage} • {med.frequency}</p>
-                          <p className="text-sm text-muted-foreground">Take at {med.time}</p>
+                    <div key={med.id} className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 border rounded-lg gap-3">
+                      <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+                        <div className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full flex-shrink-0 ${med.taken ? 'bg-green-500' : 'bg-gray-300'}`} />
+                        <div className="min-w-0 flex-1">
+                          <p className="font-medium text-sm sm:text-base truncate">{med.name}</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">{med.dosage} • {med.frequency}</p>
+                          <p className="text-xs sm:text-sm text-muted-foreground">Take at {med.time}</p>
                         </div>
                       </div>
                       <Button
                         variant={med.taken ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleMedication(med.id)}
+                        className="w-full sm:w-auto text-xs sm:text-sm"
                       >
                         {med.taken ? 'Taken' : 'Mark Taken'}
                       </Button>
@@ -600,27 +629,27 @@ const PatientPortal = () => {
                 <CardTitle>Add New Medication</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <input 
-                    className="p-3 border rounded-lg" 
+                    className="p-3 border rounded-lg text-sm" 
                     placeholder="Medication name"
                     value={newMedication.name}
                     onChange={(e) => setNewMedication(prev => ({...prev, name: e.target.value}))}
                   />
                   <input 
-                    className="p-3 border rounded-lg" 
+                    className="p-3 border rounded-lg text-sm" 
                     placeholder="Dosage"
                     value={newMedication.dosage}
                     onChange={(e) => setNewMedication(prev => ({...prev, dosage: e.target.value}))}
                   />
                   <input 
-                    className="p-3 border rounded-lg" 
+                    className="p-3 border rounded-lg text-sm" 
                     placeholder="Frequency"
                     value={newMedication.frequency}
                     onChange={(e) => setNewMedication(prev => ({...prev, frequency: e.target.value}))}
                   />
                   <input 
-                    className="p-3 border rounded-lg" 
+                    className="p-3 border rounded-lg text-sm" 
                     placeholder="Time" 
                     type="time"
                     value={newMedication.time}
@@ -706,45 +735,45 @@ const PatientPortal = () => {
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold text-green-600 mb-3">Foods to Emphasize</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        High-protein foods (lean meats, fish, eggs, legumes)
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-green-600 mb-3 text-sm sm:text-base">Foods to Emphasize</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>High-protein foods (lean meats, fish, eggs, legumes)</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Colorful fruits and vegetables
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>Colorful fruits and vegetables</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Whole grains and complex carbohydrates
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>Whole grains and complex carbohydrates</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500" />
-                        Healthy fats (avocado, nuts, olive oil)
+                      <li className="flex items-start gap-2">
+                        <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 flex-shrink-0 mt-0.5" />
+                        <span>Healthy fats (avocado, nuts, olive oil)</span>
                       </li>
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-red-600 mb-3">Foods to Limit</h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex items-center gap-2">
-                        <AlertCircle className="h-4 w-4 text-red-500" />
-                        Processed and red meats
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-red-600 mb-3 text-sm sm:text-base">Foods to Limit</h4>
+                    <ul className="space-y-2 text-xs sm:text-sm">
+                      <li className="flex items-start gap-2">
+                        <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                        <span>Processed and red meats</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <AlertCircle className="h-4 w-4 text-red-500" />
-                        Sugary drinks and excessive sweets
+                      <li className="flex items-start gap-2">
+                        <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                        <span>Sugary drinks and excessive sweets</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <AlertCircle className="h-4 w-4 text-red-500" />
-                        Alcohol consumption
+                      <li className="flex items-start gap-2">
+                        <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                        <span>Alcohol consumption</span>
                       </li>
-                      <li className="flex items-center gap-2">
-                        <AlertCircle className="h-4 w-4 text-red-500" />
-                        High-sodium processed foods
+                      <li className="flex items-start gap-2">
+                        <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                        <span>High-sodium processed foods</span>
                       </li>
                     </ul>
                   </div>
