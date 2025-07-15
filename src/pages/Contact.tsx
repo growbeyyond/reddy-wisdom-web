@@ -13,7 +13,7 @@ import {
   MessageSquare,
   Navigation as LocationIcon
 } from 'lucide-react';
-import americanOncologyImage from '@/assets/american-oncology-institute.jpg';
+
 
 const Contact = () => {
   const contactInfo = [
@@ -246,11 +246,16 @@ const Contact = () => {
                 <Card className="medical-card">
                   <CardContent className="p-6">
                     <div className="mb-4">
-                      <img 
-                        src={americanOncologyImage} 
-                        alt="American Oncology Institute Building" 
-                        className="w-full h-48 object-cover rounded-lg"
-                      />
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.8747693847647!2d78.39089!3d17.4508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sAmerican%20Oncology%20Institute!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
+                        width="100%"
+                        height="192"
+                        style={{ border: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="rounded-lg"
+                      ></iframe>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="healing-gradient w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
