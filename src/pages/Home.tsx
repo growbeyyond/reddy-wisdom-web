@@ -14,6 +14,7 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
+import InstagramFeed from '@/components/InstagramFeed';
 import doctorProfile from '@/assets/doctor-profile.png';
 import doctorClinic from '@/assets/doctor-clinic.jpg';
 import consultationRoom from '@/assets/consultation-room.jpg';
@@ -291,6 +292,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Instagram Feed */}
+      <InstagramFeed />
 
       {/* CTA Section */}
       <section className="section-padding medical-gradient">
