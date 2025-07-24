@@ -18,6 +18,14 @@ import {
   Shield
 } from 'lucide-react';
 
+// Import topic-specific images
+import immunotherapyImg from '@/assets/blog-immunotherapy.jpg';
+import breastCancerImg from '@/assets/blog-breast-cancer.jpg';
+import nutritionImg from '@/assets/blog-nutrition.jpg';
+import lungCancerImg from '@/assets/blog-lung-cancer.jpg';
+import sideEffectsImg from '@/assets/blog-side-effects.jpg';
+import mentalHealthImg from '@/assets/blog-mental-health.jpg';
+
 const Education = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -36,7 +44,7 @@ const Education = () => {
       readTime: "8 min read",
       publishDate: "June 15, 2025",
       author: "Dr. Namratha Sai Reddy",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop",
+      image: immunotherapyImg,
       featured: true,
       trending: true
     },
@@ -48,7 +56,7 @@ const Education = () => {
       readTime: "6 min read", 
       publishDate: "June 20, 2025",
       author: "Dr. Namratha Sai Reddy",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=500&h=300&fit=crop",
+      image: breastCancerImg,
       featured: true
     },
     {
@@ -59,7 +67,7 @@ const Education = () => {
       readTime: "10 min read",
       publishDate: "June 25, 2025", 
       author: "Dr. Namratha Sai Reddy",
-      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=500&h=300&fit=crop",
+      image: nutritionImg,
       featured: true
     },
     {
@@ -70,7 +78,7 @@ const Education = () => {
       readTime: "12 min read",
       publishDate: "July 1, 2025",
       author: "Dr. Namratha Sai Reddy", 
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&h=300&fit=crop"
+      image: lungCancerImg
     },
     {
       id: 5,
@@ -80,7 +88,7 @@ const Education = () => {
       readTime: "9 min read",
       publishDate: "July 5, 2025",
       author: "Dr. Namratha Sai Reddy",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop"
+      image: sideEffectsImg
     },
     {
       id: 6,
@@ -90,7 +98,7 @@ const Education = () => {
       readTime: "7 min read",
       publishDate: "July 10, 2025",
       author: "Dr. Namratha Sai Reddy",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=300&fit=crop"
+      image: mentalHealthImg
     }
   ];
 
