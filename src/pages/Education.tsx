@@ -47,7 +47,7 @@ const Education = () => {
       excerpt: "Discover how immunotherapy is changing cancer treatment outcomes and what patients need to know about this breakthrough therapy.",
       category: "Treatment Updates", 
       readTime: "8 min read",
-      publishDate: "June 15, 2025",
+      publishDate: "June 5, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: immunotherapyImg,
       featured: true,
@@ -59,7 +59,7 @@ const Education = () => {
       excerpt: "Essential screening guidelines, self-examination techniques, and lifestyle factors that can significantly reduce breast cancer risk.",
       category: "Breast Cancer",
       readTime: "6 min read", 
-      publishDate: "June 20, 2025",
+      publishDate: "June 12, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: breastCancerImg,
       featured: true
@@ -70,7 +70,7 @@ const Education = () => {
       excerpt: "Complete nutritional guide for cancer patients, including foods to eat, avoid, and how to manage treatment side effects through diet.",
       category: "Nutrition",
       readTime: "10 min read",
-      publishDate: "June 25, 2025", 
+      publishDate: "June 18, 2025", 
       author: "Dr. Namratha Sai Reddy",
       image: nutritionImg,
       featured: true
@@ -81,7 +81,7 @@ const Education = () => {
       excerpt: "Comprehensive guide to lung cancer types, symptoms, risk factors, and modern treatment approaches including targeted therapy.",
       category: "Lung Cancer",
       readTime: "12 min read",
-      publishDate: "July 1, 2025",
+      publishDate: "June 25, 2025",
       author: "Dr. Namratha Sai Reddy", 
       image: lungCancerImg
     },
@@ -91,7 +91,7 @@ const Education = () => {
       excerpt: "Practical strategies to cope with common side effects of chemotherapy, radiation, and immunotherapy treatments.",
       category: "Treatment Updates",
       readTime: "9 min read",
-      publishDate: "July 5, 2025",
+      publishDate: "July 2, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: sideEffectsImg
     },
@@ -101,7 +101,7 @@ const Education = () => {
       excerpt: "Understanding the psychological impact of cancer diagnosis and practical ways to maintain mental wellness during treatment.",
       category: "Mental Health",
       readTime: "7 min read",
-      publishDate: "July 10, 2025",
+      publishDate: "July 8, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: mentalHealthImg
     },
@@ -132,7 +132,7 @@ const Education = () => {
       excerpt: "Navigate post-treatment life with expert guidance on follow-up care, managing late effects, exercise programs, and building a strong support network for cancer survivors.",
       category: "Survivorship",
       readTime: "13 min read",
-      publishDate: "July 25, 2025",
+      publishDate: "July 24, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: survivorshipImg,
       featured: true
@@ -143,7 +143,7 @@ const Education = () => {
       excerpt: "Explore how genetic testing, biomarker analysis, and targeted therapies are revolutionizing cancer treatment. Learn about genomic sequencing and personalized medicine approaches.",
       category: "Precision Medicine",
       readTime: "10 min read",
-      publishDate: "August 1, 2025",
+      publishDate: "July 26, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: precisionMedicineImg,
       trending: true
@@ -154,7 +154,7 @@ const Education = () => {
       excerpt: "Scientifically-proven lifestyle modifications including diet, exercise, tobacco cessation, and environmental factors that significantly reduce cancer risk and promote overall health.",
       category: "Prevention",
       readTime: "8 min read",
-      publishDate: "August 5, 2025",
+      publishDate: "July 27, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: preventionLifestyleImg
     }
