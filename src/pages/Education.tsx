@@ -25,14 +25,19 @@ import nutritionImg from '@/assets/blog-nutrition.jpg';
 import lungCancerImg from '@/assets/blog-lung-cancer.jpg';
 import sideEffectsImg from '@/assets/blog-side-effects.jpg';
 import mentalHealthImg from '@/assets/blog-mental-health.jpg';
+import prostateCancerImg from '@/assets/blog-prostate-cancer.jpg';
+import colorectalCancerImg from '@/assets/blog-colorectal-cancer.jpg';
+import survivorshipImg from '@/assets/blog-survivorship.jpg';
+import precisionMedicineImg from '@/assets/blog-precision-medicine.jpg';
+import preventionLifestyleImg from '@/assets/blog-prevention-lifestyle.jpg';
 
 const Education = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const blogCategories = [
-    'All', 'Breast Cancer', 'Lung Cancer', 'Prevention', 'Treatment Updates', 
-    'Nutrition', 'Mental Health', 'Research', 'Survivorship'
+    'All', 'Breast Cancer', 'Lung Cancer', 'Prostate Cancer', 'Colorectal Cancer', 'Prevention', 
+    'Treatment Updates', 'Nutrition', 'Mental Health', 'Research', 'Survivorship', 'Precision Medicine'
   ];
 
   const featuredBlogs = [
@@ -99,6 +104,59 @@ const Education = () => {
       publishDate: "July 10, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: mentalHealthImg
+    },
+    {
+      id: 7,
+      title: "Prostate Cancer Screening: Essential Guide for Men Over 50",
+      excerpt: "Comprehensive overview of PSA testing, digital rectal exams, early detection strategies, and treatment options for prostate cancer. Learn about risk factors, symptoms, and preventive measures.",
+      category: "Prostate Cancer",
+      readTime: "11 min read",
+      publishDate: "July 15, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: prostateCancerImg,
+      trending: true
+    },
+    {
+      id: 8,
+      title: "Colorectal Cancer Prevention: Screening Guidelines and Early Detection",
+      excerpt: "Complete guide to colonoscopy procedures, FIT tests, and lifestyle modifications for colorectal cancer prevention. Understand symptoms, family history factors, and screening schedules.",
+      category: "Colorectal Cancer",
+      readTime: "9 min read",
+      publishDate: "July 20, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: colorectalCancerImg
+    },
+    {
+      id: 9,
+      title: "Cancer Survivorship: Life After Treatment and Long-term Wellness",
+      excerpt: "Navigate post-treatment life with expert guidance on follow-up care, managing late effects, exercise programs, and building a strong support network for cancer survivors.",
+      category: "Survivorship",
+      readTime: "13 min read",
+      publishDate: "July 25, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: survivorshipImg,
+      featured: true
+    },
+    {
+      id: 10,
+      title: "Precision Medicine in Cancer Care: Personalized Treatment Revolution",
+      excerpt: "Explore how genetic testing, biomarker analysis, and targeted therapies are revolutionizing cancer treatment. Learn about genomic sequencing and personalized medicine approaches.",
+      category: "Precision Medicine",
+      readTime: "10 min read",
+      publishDate: "August 1, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: precisionMedicineImg,
+      trending: true
+    },
+    {
+      id: 11,
+      title: "Cancer Prevention Lifestyle: Evidence-Based Strategies for Risk Reduction",
+      excerpt: "Scientifically-proven lifestyle modifications including diet, exercise, tobacco cessation, and environmental factors that significantly reduce cancer risk and promote overall health.",
+      category: "Prevention",
+      readTime: "8 min read",
+      publishDate: "August 5, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: preventionLifestyleImg
     }
   ];
 
