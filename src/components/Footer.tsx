@@ -91,7 +91,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
-                Grow Beyond
+                Grow Beyyond
               </a>
             </span>
           </p>
