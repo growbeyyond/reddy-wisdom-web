@@ -43,7 +43,7 @@ const Education = () => {
   const featuredBlogs = [
     {
       id: 1,
-      title: "Understanding Immunotherapy: Revolutionary Cancer Treatment in 2024",
+      title: "Understanding Immunotherapy: Revolutionary Cancer Treatment in 2025",
       excerpt: "Discover how immunotherapy is changing cancer treatment outcomes and what patients need to know about this breakthrough therapy.",
       category: "Treatment Updates", 
       readTime: "8 min read",
