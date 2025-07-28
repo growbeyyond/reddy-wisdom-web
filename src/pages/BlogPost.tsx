@@ -17,18 +17,31 @@ import {
   Lightbulb
 } from 'lucide-react';
 
+// Import local images
+import blogImmunoImage from '@/assets/blog-immunotherapy.jpg';
+import blogBreastImage from '@/assets/blog-breast-cancer.jpg';
+import blogLungImage from '@/assets/blog-lung-cancer.jpg';
+import blogColorectalImage from '@/assets/blog-colorectal-cancer.jpg';
+import blogProstateImage from '@/assets/blog-prostate-cancer.jpg';
+import blogSideEffectsImage from '@/assets/blog-side-effects.jpg';
+import blogNutritionImage from '@/assets/blog-nutrition.jpg';
+import blogMentalHealthImage from '@/assets/blog-mental-health.jpg';
+import blogSurvivorshipImage from '@/assets/blog-survivorship.jpg';
+import blogPrecisionImage from '@/assets/blog-precision-medicine.jpg';
+import blogPreventionImage from '@/assets/blog-prevention-lifestyle.jpg';
+
 const BlogPost = () => {
   const { id } = useParams();
 
   // In a real app, this would fetch from an API
   const blogPosts = {
     "1": {
-      title: "Understanding Immunotherapy: Revolutionary Cancer Treatment in 2024",
+      title: "Understanding Immunotherapy: Revolutionary Cancer Treatment in 2025",
       category: "Treatment Updates",
       author: "Dr. Namratha Sai Reddy",
-      publishDate: "December 15, 2024",
+      publishDate: "January 15, 2025",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=400&fit=crop",
+      image: blogImmunoImage,
       content: {
         introduction: "Immunotherapy has emerged as one of the most promising approaches in modern cancer treatment, offering new hope for patients who previously had limited treatment options. This revolutionary therapy harnesses the power of your own immune system to fight cancer cells more effectively than ever before.",
         
@@ -104,9 +117,9 @@ const BlogPost = () => {
       title: "Breast Cancer Prevention: Early Detection Saves Lives",
       category: "Breast Cancer", 
       author: "Dr. Namratha Sai Reddy",
-      publishDate: "December 12, 2024",
+      publishDate: "January 12, 2025",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&h=400&fit=crop",
+      image: blogBreastImage,
       content: {
         introduction: "Breast cancer is one of the most common cancers affecting women worldwide, but early detection and prevention strategies can significantly improve outcomes. Understanding your risk factors and following screening guidelines can literally save your life.",
         
@@ -185,6 +198,973 @@ const BlogPost = () => {
           "Know your family history and discuss it with your doctor",
           "Lifestyle changes can reduce your risk significantly",
           "Don't ignore changes - early detection is key"
+        ]
+      }
+    },
+    "3": {
+      title: "Lung Cancer: Understanding Symptoms, Screening, and Treatment Options",
+      category: "Lung Cancer",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "January 10, 2025",
+      readTime: "9 min read",
+      image: blogLungImage,
+      content: {
+        introduction: "Lung cancer remains one of the leading causes of cancer-related deaths globally, but advances in early detection and treatment have significantly improved patient outcomes. Understanding the risk factors, symptoms, and available treatments is crucial for both patients and their families.",
+        
+        sections: [
+          {
+            heading: "Types of Lung Cancer",
+            content: "There are two main types of lung cancer, each requiring different treatment approaches:",
+            type: "info",
+            items: [
+              "Non-Small Cell Lung Cancer (NSCLC): Accounts for about 85% of lung cancers",
+              "Small Cell Lung Cancer (SCLC): More aggressive but responds well to chemotherapy and radiation",
+              "Adenocarcinoma: Most common type of NSCLC, often found in non-smokers",
+              "Squamous Cell Carcinoma: Usually develops in the central chest area",
+              "Large Cell Carcinoma: Can appear in any part of the lung"
+            ]
+          },
+          {
+            heading: "Risk Factors and Prevention",
+            content: "While smoking is the leading cause, other factors can increase lung cancer risk:",
+            type: "warning",
+            items: [
+              "Tobacco use: Responsible for 85% of lung cancer cases",
+              "Secondhand smoke exposure",
+              "Radon gas exposure (leading cause in non-smokers)",
+              "Occupational exposure to asbestos, arsenic, or diesel exhaust",
+              "Air pollution and environmental toxins",
+              "Family history of lung cancer",
+              "Previous radiation therapy to the chest"
+            ]
+          },
+          {
+            heading: "Early Symptoms to Watch For",
+            content: "Lung cancer symptoms often don't appear until the disease is advanced, but early signs include:",
+            type: "highlight",
+            items: [
+              "Persistent cough that doesn't go away or worsens",
+              "Coughing up blood or rust-colored sputum",
+              "Chest pain that worsens with deep breathing or coughing",
+              "Shortness of breath or wheezing",
+              "Hoarseness or voice changes",
+              "Frequent respiratory infections",
+              "Unexplained weight loss and fatigue"
+            ]
+          },
+          {
+            heading: "Screening Guidelines",
+            content: "Low-dose CT screening is recommended for high-risk individuals:",
+            type: "success",
+            items: [
+              "Adults aged 50-80 years",
+              "30+ pack-year smoking history",
+              "Currently smoke or quit within the past 15 years",
+              "Annual screening can detect cancer early when treatment is most effective",
+              "Discuss with your doctor if you meet the criteria"
+            ]
+          },
+          {
+            heading: "Treatment Options",
+            content: "Treatment depends on the type, stage, and overall health of the patient:",
+            type: "info",
+            items: [
+              "Surgery: Best option for early-stage lung cancer",
+              "Radiation therapy: Can be curative or palliative",
+              "Chemotherapy: Often combined with other treatments",
+              "Targeted therapy: Based on specific genetic mutations",
+              "Immunotherapy: Helps the immune system fight cancer",
+              "Clinical trials: Access to newest treatments"
+            ]
+          }
+        ],
+        
+        conclusion: "While lung cancer is a serious diagnosis, advances in treatment have dramatically improved outcomes, especially when caught early. If you're at high risk, talk to your healthcare provider about screening options and steps you can take to reduce your risk.",
+        
+        keyTakeaways: [
+          "Smoking cessation is the most important prevention strategy",
+          "Early screening can detect cancer when treatment is most effective",
+          "Many treatment options are available, including new targeted therapies",
+          "Support systems are crucial for patients and families",
+          "Regular follow-up care is essential for monitoring and prevention"
+        ]
+      }
+    },
+    "4": {
+      title: "Colorectal Cancer: Prevention Through Lifestyle and Screening",
+      category: "Colorectal Cancer",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "January 8, 2025",
+      readTime: "7 min read",
+      image: blogColorectalImage,
+      content: {
+        introduction: "Colorectal cancer is the third most common cancer diagnosed in both men and women, but it's also one of the most preventable cancers. With proper screening and healthy lifestyle choices, many cases can be prevented or detected early when treatment is most effective.",
+        
+        sections: [
+          {
+            heading: "Understanding Colorectal Cancer",
+            content: "Colorectal cancer develops in the colon or rectum and often begins as small growths called polyps:",
+            type: "info",
+            items: [
+              "Most colorectal cancers start as adenomatous polyps",
+              "It takes 10-15 years for a polyp to become cancerous",
+              "Early-stage colorectal cancer often has no symptoms",
+              "Regular screening can detect and remove polyps before they become cancer",
+              "5-year survival rate is over 90% when caught early"
+            ]
+          },
+          {
+            heading: "Risk Factors",
+            content: "Several factors can increase your risk of developing colorectal cancer:",
+            type: "warning",
+            items: [
+              "Age: Risk increases after 45, especially after 50",
+              "Personal or family history of colorectal cancer or polyps",
+              "Inflammatory bowel disease (Crohn's or ulcerative colitis)",
+              "Inherited genetic syndromes (Lynch syndrome, FAP)",
+              "Type 2 diabetes",
+              "Obesity and sedentary lifestyle",
+              "High consumption of red and processed meats",
+              "Smoking and excessive alcohol consumption"
+            ]
+          },
+          {
+            heading: "Screening Options",
+            content: "Multiple screening tests are available, each with different advantages:",
+            type: "success",
+            steps: [
+              "Colonoscopy: Gold standard, every 10 years starting at age 45",
+              "FIT Test: Annual stool test that detects blood",
+              "Cologuard: Stool DNA test every 3 years",
+              "Flexible Sigmoidoscopy: Examines lower colon every 5 years",
+              "CT Colonography: Virtual colonoscopy every 5 years"
+            ]
+          },
+          {
+            heading: "Symptoms to Watch For",
+            content: "While early colorectal cancer may have no symptoms, advanced cancer may cause:",
+            type: "highlight",
+            items: [
+              "Changes in bowel habits lasting more than a few days",
+              "Blood in stool or rectal bleeding",
+              "Persistent abdominal discomfort or cramping",
+              "Feeling that bowel doesn't empty completely",
+              "Weakness or fatigue",
+              "Unexplained weight loss",
+              "Iron deficiency anemia"
+            ]
+          },
+          {
+            heading: "Prevention Strategies",
+            content: "Lifestyle modifications can significantly reduce your risk:",
+            type: "success",
+            items: [
+              "Maintain a healthy weight through diet and exercise",
+              "Eat plenty of fruits, vegetables, and whole grains",
+              "Limit red meat and avoid processed meats",
+              "Don't smoke and limit alcohol consumption",
+              "Exercise regularly (at least 150 minutes per week)",
+              "Consider calcium and vitamin D supplements",
+              "Follow screening guidelines appropriate for your risk level"
+            ]
+          }
+        ],
+        
+        conclusion: "Colorectal cancer is largely preventable through regular screening and healthy lifestyle choices. The key is starting screening at the appropriate age and maintaining regular check-ups. If you're due for screening or have concerns about your risk, don't delay in talking to your healthcare provider.",
+        
+        keyTakeaways: [
+          "Screening saves lives - start at age 45 or earlier if high risk",
+          "Most colorectal cancers develop slowly from polyps",
+          "Lifestyle changes can significantly reduce risk",
+          "Multiple screening options are available to fit your preferences",
+          "Don't ignore symptoms - early detection improves outcomes"
+        ]
+      }
+    },
+    "5": {
+      title: "Prostate Cancer: What Every Man Should Know",
+      category: "Prostate Cancer",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "January 5, 2025",
+      readTime: "8 min read",
+      image: blogProstateImage,
+      content: {
+        introduction: "Prostate cancer is the second most common cancer in men, but when detected early, it has excellent treatment outcomes. Understanding risk factors, screening options, and treatment choices empowers men to make informed decisions about their health.",
+        
+        sections: [
+          {
+            heading: "Understanding the Prostate",
+            content: "The prostate is a small gland that plays a crucial role in male reproductive health:",
+            type: "info",
+            items: [
+              "Walnut-sized gland located below the bladder",
+              "Surrounds the urethra (tube that carries urine)",
+              "Produces fluid that nourishes and protects sperm",
+              "Naturally enlarges with age (benign prostatic hyperplasia)",
+              "Most prostate cancers grow slowly and may not cause problems"
+            ]
+          },
+          {
+            heading: "Risk Factors",
+            content: "Several factors influence prostate cancer risk:",
+            type: "warning",
+            items: [
+              "Age: Risk increases significantly after 50",
+              "Race: African American men have highest risk",
+              "Family history: Genetic predisposition increases risk",
+              "Geography: More common in North America and Europe",
+              "Diet: High-fat diet may increase risk",
+              "Obesity: May be linked to more aggressive forms",
+              "Chemical exposure: Agent Orange and other toxins"
+            ]
+          },
+          {
+            heading: "Screening Guidelines",
+            content: "Prostate cancer screening involves shared decision-making between patient and doctor:",
+            type: "highlight",
+            steps: [
+              "Age 50: Begin discussions about screening for average-risk men",
+              "Age 45: Start discussions for high-risk men (African American, family history)",
+              "PSA blood test: Measures prostate-specific antigen levels",
+              "Digital rectal exam: Physical examination of the prostate",
+              "Discuss benefits and risks of screening with your doctor",
+              "Consider personal risk factors and preferences"
+            ]
+          },
+          {
+            heading: "Symptoms and Warning Signs",
+            content: "Early prostate cancer usually causes no symptoms, but advanced cancer may cause:",
+            type: "info",
+            items: [
+              "Difficulty starting or stopping urination",
+              "Weak or interrupted urine flow",
+              "Frequent urination, especially at night",
+              "Blood in urine or semen",
+              "Pain or discomfort when sitting",
+              "Erectile dysfunction",
+              "Bone pain (if cancer has spread)"
+            ]
+          },
+          {
+            heading: "Treatment Options",
+            content: "Treatment depends on cancer stage, age, and overall health:",
+            type: "success",
+            items: [
+              "Active surveillance: Monitoring slow-growing cancers",
+              "Surgery: Radical prostatectomy for localized cancer",
+              "Radiation therapy: External beam or brachytherapy",
+              "Hormone therapy: Blocks testosterone to slow cancer growth",
+              "Chemotherapy: For advanced or resistant cancers",
+              "Immunotherapy: Newer treatments that boost immune response",
+              "Clinical trials: Access to experimental treatments"
+            ]
+          },
+          {
+            heading: "Quality of Life Considerations",
+            content: "Treatment decisions should consider potential side effects:",
+            type: "warning",
+            benefits: [
+              "Cure or control of cancer",
+              "Peace of mind from treatment",
+              "Improved survival rates",
+              "Advanced treatment options available"
+            ],
+            sideEffects: [
+              "Urinary incontinence",
+              "Erectile dysfunction",
+              "Bowel problems",
+              "Fatigue from treatment",
+              "Emotional and psychological impacts"
+            ]
+          }
+        ],
+        
+        conclusion: "Prostate cancer treatment has evolved significantly, offering men multiple options that can cure the disease while preserving quality of life. The key is early detection through appropriate screening and open communication with your healthcare team about your individual risk factors and treatment preferences.",
+        
+        keyTakeaways: [
+          "Age 50 is the time to start screening discussions",
+          "Early prostate cancer often has no symptoms",
+          "Multiple treatment options are available",
+          "Quality of life should be considered in treatment decisions",
+          "Support groups and counseling can help with treatment decisions"
+        ]
+      }
+    },
+    "6": {
+      title: "Managing Cancer Treatment Side Effects: A Comprehensive Guide",
+      category: "Side Effects",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "January 3, 2025",
+      readTime: "10 min read",
+      image: blogSideEffectsImage,
+      content: {
+        introduction: "Cancer treatment side effects can be challenging, but with proper management and support, most can be effectively controlled. Understanding what to expect and how to manage side effects empowers patients to maintain their quality of life during treatment.",
+        
+        sections: [
+          {
+            heading: "Common Treatment Side Effects",
+            content: "Different cancer treatments cause different side effects, but some are common across multiple therapies:",
+            type: "info",
+            items: [
+              "Fatigue: Most common side effect affecting up to 90% of patients",
+              "Nausea and vomiting: Varies by treatment type and individual sensitivity",
+              "Hair loss: Common with chemotherapy, usually reversible",
+              "Skin changes: Dryness, sensitivity, or rash",
+              "Appetite changes: Loss of appetite or taste changes",
+              "Digestive issues: Diarrhea, constipation, or mouth sores",
+              "Cognitive changes: 'Chemo brain' or difficulty concentrating"
+            ]
+          },
+          {
+            heading: "Managing Fatigue",
+            content: "Fatigue is often the most challenging side effect, but several strategies can help:",
+            type: "highlight",
+            steps: [
+              "Plan activities for times when you have the most energy",
+              "Take short naps (20-30 minutes) rather than long sleeps during the day",
+              "Engage in light exercise like walking or yoga",
+              "Ask for help with household tasks and daily activities",
+              "Maintain a regular sleep schedule",
+              "Eat nutritious foods to support energy levels",
+              "Consider talking to your doctor about medications for severe fatigue"
+            ]
+          },
+          {
+            heading: "Nausea and Vomiting Management",
+            content: "Modern anti-nausea medications are highly effective when used properly:",
+            type: "success",
+            items: [
+              "Take anti-nausea medications as prescribed, even if you don't feel sick",
+              "Eat small, frequent meals throughout the day",
+              "Avoid strong odors and spicy, fatty, or overly sweet foods",
+              "Try ginger tea, crackers, or bland foods",
+              "Stay hydrated with clear liquids",
+              "Consider acupuncture or relaxation techniques",
+              "Report breakthrough nausea to your healthcare team immediately"
+            ]
+          },
+          {
+            heading: "Skin and Hair Care",
+            content: "Protecting your skin and managing hair loss during treatment:",
+            type: "warning",
+            items: [
+              "Use gentle, fragrance-free skincare products",
+              "Apply sunscreen daily, even indoors",
+              "Moisturize skin regularly to prevent dryness",
+              "Consider scalp cooling to reduce hair loss",
+              "Use soft-bristled brushes and gentle shampoos",
+              "Explore wig, scarf, or hat options before hair loss begins",
+              "Remember that hair usually regrows within 3-6 months after treatment"
+            ]
+          },
+          {
+            heading: "Nutritional Support",
+            content: "Maintaining good nutrition during treatment supports healing and energy:",
+            type: "success",
+            items: [
+              "Work with a registered dietitian experienced in oncology",
+              "Focus on protein-rich foods to support healing",
+              "Stay hydrated with water, herbal teas, and clear broths",
+              "Use nutritional supplements if recommended by your team",
+              "Try different textures if swallowing becomes difficult",
+              "Keep healthy snacks readily available",
+              "Don't worry about temporary weight changes during treatment"
+            ]
+          },
+          {
+            heading: "Emotional and Mental Health",
+            content: "Addressing the emotional impact of side effects is crucial for overall well-being:",
+            type: "highlight",
+            items: [
+              "Acknowledge that emotional reactions are normal",
+              "Consider counseling or support groups",
+              "Practice stress-reduction techniques like meditation",
+              "Maintain social connections with family and friends",
+              "Engage in activities that bring joy and meaning",
+              "Communicate openly with your healthcare team",
+              "Don't hesitate to ask for help with mental health concerns"
+            ]
+          }
+        ],
+        
+        conclusion: "Remember that side effects are temporary, and there are effective strategies to manage most of them. Your healthcare team is your best resource for managing side effects, so always communicate openly about what you're experiencing. With proper support and management, you can maintain your quality of life throughout treatment.",
+        
+        keyTakeaways: [
+          "Most side effects are manageable with proper strategies",
+          "Prevention is often more effective than treatment of side effects",
+          "Your healthcare team is there to help - communicate openly",
+          "Side effects are usually temporary and resolve after treatment",
+          "Support from family, friends, and other patients is invaluable"
+        ]
+      }
+    },
+    "7": {
+      title: "Nutrition During Cancer Treatment: Fueling Your Recovery",
+      category: "Nutrition",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "January 1, 2025",
+      readTime: "9 min read",
+      image: blogNutritionImage,
+      content: {
+        introduction: "Proper nutrition during cancer treatment is crucial for maintaining strength, supporting your immune system, and helping your body heal. While treatment may affect your appetite and ability to eat, there are many strategies to ensure you get the nutrients you need.",
+        
+        sections: [
+          {
+            heading: "Why Nutrition Matters During Treatment",
+            content: "Good nutrition serves multiple important functions during cancer treatment:",
+            type: "info",
+            items: [
+              "Supports immune system function to fight infection",
+              "Helps maintain strength and energy levels",
+              "Aids in healing and recovery from treatment",
+              "May help reduce treatment side effects",
+              "Supports better treatment tolerance and outcomes",
+              "Helps maintain healthy weight and muscle mass",
+              "Improves overall quality of life"
+            ]
+          },
+          {
+            heading: "Essential Nutrients for Cancer Patients",
+            content: "Focus on these key nutrients to support your body during treatment:",
+            type: "success",
+            items: [
+              "Protein: 1.2-1.5 grams per kg of body weight daily",
+              "Healthy fats: Omega-3 fatty acids for anti-inflammatory benefits",
+              "Complex carbohydrates: For sustained energy",
+              "Vitamins and minerals: Especially vitamin D, B vitamins, and zinc",
+              "Antioxidants: From colorful fruits and vegetables",
+              "Fiber: To support digestive health",
+              "Adequate calories: To prevent unwanted weight loss"
+            ]
+          },
+          {
+            heading: "Managing Treatment-Related Eating Challenges",
+            content: "Common eating problems during treatment and solutions:",
+            type: "warning",
+            steps: [
+              "Nausea: Eat small, frequent meals; try ginger or bland foods",
+              "Loss of appetite: Use smaller plates; eat calorie-dense foods",
+              "Taste changes: Experiment with seasonings; try cold or room temperature foods",
+              "Mouth sores: Choose soft, moist foods; avoid spicy or acidic items",
+              "Dry mouth: Sip liquids frequently; use sauces and gravies",
+              "Swallowing difficulties: Try pureed or liquid consistency foods",
+              "Diarrhea: Choose low-fiber, binding foods; stay hydrated"
+            ]
+          },
+          {
+            heading: "Meal Planning Strategies",
+            content: "Practical tips for maintaining good nutrition during treatment:",
+            type: "highlight",
+            items: [
+              "Plan and prepare meals when you feel well",
+              "Keep easy-to-prepare foods on hand",
+              "Accept help from family and friends with meal preparation",
+              "Consider meal delivery services or prepared meal options",
+              "Focus on foods you enjoy and can tolerate",
+              "Eat something every 2-3 hours, even if just a small snack",
+              "Keep a food diary to track what works best for you"
+            ]
+          },
+          {
+            heading: "Foods to Emphasize",
+            content: "Include these nutritious foods in your diet when possible:",
+            type: "success",
+            items: [
+              "Lean proteins: Chicken, fish, eggs, beans, and dairy products",
+              "Whole grains: Brown rice, quinoa, oats, and whole grain breads",
+              "Colorful fruits and vegetables: Rich in vitamins and antioxidants",
+              "Healthy fats: Avocado, nuts, seeds, and olive oil",
+              "Dairy or dairy alternatives: For calcium and protein",
+              "Probiotic foods: Yogurt and kefir for digestive health",
+              "Plenty of fluids: Water, herbal teas, and clear broths"
+            ]
+          },
+          {
+            heading: "When to Seek Professional Help",
+            content: "Contact your healthcare team or a registered dietitian if you experience:",
+            type: "warning",
+            items: [
+              "Unintentional weight loss of more than 5 pounds",
+              "Inability to eat or drink for more than 24 hours",
+              "Severe nausea or vomiting that prevents eating",
+              "Signs of dehydration (dizziness, dark urine, dry mouth)",
+              "Persistent diarrhea or constipation",
+              "Severe mouth sores that interfere with eating",
+              "Questions about supplements or special diets"
+            ]
+          }
+        ],
+        
+        conclusion: "Remember that nutrition needs can change throughout treatment, and what works one day may not work the next. Be flexible and patient with yourself. The goal is to nourish your body as best you can while managing treatment side effects. Your healthcare team, including registered dietitians, are valuable resources to help you maintain good nutrition throughout your cancer journey.",
+        
+        keyTakeaways: [
+          "Good nutrition supports treatment effectiveness and recovery",
+          "Small, frequent meals are often better than large meals",
+          "Stay flexible - food preferences may change during treatment",
+          "Protein and adequate calories are especially important",
+          "Professional nutrition support is available and beneficial"
+        ]
+      }
+    },
+    "8": {
+      title: "Mental Health and Cancer: Emotional Support During Treatment",
+      category: "Mental Health",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "December 28, 2024",
+      readTime: "8 min read",
+      image: blogMentalHealthImage,
+      content: {
+        introduction: "A cancer diagnosis and treatment can take a significant emotional toll. It's normal to experience a wide range of emotions, from fear and anxiety to sadness and anger. Understanding these feelings and knowing where to find support is an essential part of comprehensive cancer care.",
+        
+        sections: [
+          {
+            heading: "Common Emotional Responses to Cancer",
+            content: "Most people experience various emotions after a cancer diagnosis. These reactions are normal and expected:",
+            type: "info",
+            items: [
+              "Shock and disbelief: 'This can't be happening to me'",
+              "Fear and anxiety: About treatment, pain, or the future",
+              "Sadness and grief: For the life you knew before cancer",
+              "Anger: At the unfairness of the situation",
+              "Guilt: Wondering 'What did I do to cause this?'",
+              "Relief: When a diagnosis explains concerning symptoms",
+              "Hope: Focusing on treatment and recovery possibilities"
+            ]
+          },
+          {
+            heading: "Recognizing When You Need Extra Support",
+            content: "While emotional reactions are normal, some signs indicate you might benefit from professional help:",
+            type: "warning",
+            items: [
+              "Persistent sadness lasting more than two weeks",
+              "Inability to concentrate or make decisions",
+              "Loss of interest in activities you usually enjoy",
+              "Difficulty sleeping or sleeping too much",
+              "Changes in appetite or eating patterns",
+              "Feeling hopeless or thinking about death frequently",
+              "Increased use of alcohol or drugs to cope",
+              "Withdrawing from family and friends"
+            ]
+          },
+          {
+            heading: "Coping Strategies That Help",
+            content: "Healthy coping mechanisms can improve your emotional well-being:",
+            type: "success",
+            steps: [
+              "Stay connected with supportive family and friends",
+              "Join a cancer support group to connect with others who understand",
+              "Practice relaxation techniques like deep breathing or meditation",
+              "Engage in activities that bring you joy and meaning",
+              "Maintain routines and normal activities when possible",
+              "Express your feelings through writing, art, or talking",
+              "Focus on what you can control rather than what you can't"
+            ]
+          },
+          {
+            heading: "Building Your Support Network",
+            content: "A strong support system is crucial for emotional well-being during cancer treatment:",
+            type: "highlight",
+            items: [
+              "Family and friends: Your primary emotional support system",
+              "Healthcare team: Doctors, nurses, social workers, and chaplains",
+              "Support groups: In-person or online communities",
+              "Mental health professionals: Counselors, psychologists, or psychiatrists",
+              "Spiritual advisors: Clergy, chaplains, or spiritual counselors",
+              "Practical helpers: Those who assist with daily tasks",
+              "Peer mentors: Cancer survivors who can share their experiences"
+            ]
+          },
+          {
+            heading: "Communication Tips",
+            content: "Effective communication with your support network is essential:",
+            type: "info",
+            items: [
+              "Be honest about how you're feeling and what you need",
+              "Ask specific questions about your diagnosis and treatment",
+              "Let others know how they can best support you",
+              "Set boundaries when you need space or time alone",
+              "Share your fears and concerns rather than keeping them inside",
+              "Don't feel obligated to stay positive all the time",
+              "Consider having a family spokesperson for updates during treatment"
+            ]
+          },
+          {
+            heading: "Professional Mental Health Resources",
+            content: "Many types of professional support are available:",
+            type: "success",
+            items: [
+              "Individual counseling: One-on-one therapy sessions",
+              "Family therapy: Including loved ones in the healing process",
+              "Group therapy: Sharing experiences with other cancer patients",
+              "Cognitive behavioral therapy: Changing negative thought patterns",
+              "Medication: Antidepressants or anti-anxiety medications if needed",
+              "Mindfulness-based interventions: Meditation and stress reduction",
+              "Art or music therapy: Creative approaches to emotional healing"
+            ]
+          }
+        ],
+        
+        conclusion: "Taking care of your mental health is just as important as treating your cancer. Don't hesitate to reach out for support - it's a sign of strength, not weakness. Many resources are available to help you cope with the emotional challenges of cancer, and seeking help can significantly improve your quality of life during treatment and beyond.",
+        
+        keyTakeaways: [
+          "Emotional reactions to cancer are normal and expected",
+          "Professional mental health support is a valuable part of cancer care",
+          "Building a strong support network improves outcomes",
+          "Communication about feelings and needs is essential",
+          "Taking care of mental health supports overall healing"
+        ]
+      }
+    },
+    "9": {
+      title: "Cancer Survivorship: Life After Treatment",
+      category: "Survivorship",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "December 25, 2024",
+      readTime: "7 min read",
+      image: blogSurvivorshipImage,
+      content: {
+        introduction: "Completing cancer treatment is a significant milestone, but it also begins a new phase called survivorship. This transition brings unique challenges and opportunities as you adapt to life after cancer and focus on maintaining your health and well-being for the long term.",
+        
+        sections: [
+          {
+            heading: "The Survivorship Transition",
+            content: "Moving from active treatment to survivorship involves both physical and emotional adjustments:",
+            type: "info",
+            items: [
+              "Relief at completing treatment mixed with anxiety about recurrence",
+              "Physical recovery from treatment effects",
+              "Adjusting to a 'new normal' in daily life",
+              "Shifting from frequent medical appointments to follow-up care",
+              "Rebuilding confidence in your body and abilities",
+              "Redefining your identity beyond being a 'cancer patient'",
+              "Planning for the future with cancer in your history"
+            ]
+          },
+          {
+            heading: "Follow-up Care and Monitoring",
+            content: "Regular follow-up care is essential for monitoring your health and detecting any issues early:",
+            type: "success",
+            steps: [
+              "Schedule regular check-ups as recommended by your oncologist",
+              "Understand which tests and scans you'll need and when",
+              "Keep detailed records of your treatment and follow-up care",
+              "Know the signs and symptoms of recurrence to watch for",
+              "Maintain communication with your primary care physician",
+              "Stay up-to-date with routine health screenings",
+              "Consider developing a survivorship care plan with your team"
+            ]
+          },
+          {
+            heading: "Managing Late Effects",
+            content: "Some treatment effects may appear months or years after completing therapy:",
+            type: "warning",
+            items: [
+              "Fatigue: May persist for months after treatment ends",
+              "Cognitive changes: 'Chemo brain' or difficulty concentrating",
+              "Heart problems: From certain chemotherapy drugs or radiation",
+              "Bone health issues: Increased risk of osteoporosis",
+              "Secondary cancers: Rare but possible risk from some treatments",
+              "Fertility issues: Potential impact on reproductive health",
+              "Lymphedema: Swelling that can develop after lymph node removal"
+            ]
+          },
+          {
+            heading: "Healthy Lifestyle for Survivors",
+            content: "Adopting healthy habits can improve your quality of life and may reduce recurrence risk:",
+            type: "highlight",
+            items: [
+              "Maintain a balanced diet rich in fruits, vegetables, and whole grains",
+              "Engage in regular physical activity as approved by your doctor",
+              "Maintain a healthy weight through diet and exercise",
+              "Avoid tobacco and limit alcohol consumption",
+              "Get adequate sleep and manage stress effectively",
+              "Protect your skin from sun exposure",
+              "Stay current with vaccinations and preventive care"
+            ]
+          },
+          {
+            heading: "Emotional and Social Adjustment",
+            content: "The emotional journey of survivorship is unique for each person:",
+            type: "info",
+            items: [
+              "Fear of recurrence: Normal but manageable with support",
+              "Relationship changes: Some relationships may be stronger, others strained",
+              "Work and career decisions: Returning to work or making changes",
+              "Financial concerns: Dealing with treatment costs and insurance",
+              "Body image: Adapting to physical changes from treatment",
+              "Appreciation for life: Many survivors report increased gratitude",
+              "Desire to help others: Wanting to support other cancer patients"
+            ]
+          },
+          {
+            heading: "Resources for Survivors",
+            content: "Many resources are available to support you in your survivorship journey:",
+            type: "success",
+            items: [
+              "Survivorship clinics: Specialized care for cancer survivors",
+              "Support groups: Connecting with other survivors",
+              "Rehabilitation services: Physical, occupational, or speech therapy",
+              "Nutrition counseling: Maintaining healthy eating habits",
+              "Financial counseling: Managing healthcare costs and insurance",
+              "Career counseling: Navigating work-related decisions",
+              "Mental health services: Ongoing emotional support"
+            ]
+          }
+        ],
+        
+        conclusion: "Cancer survivorship is a journey that continues long after treatment ends. While it brings unique challenges, it also offers opportunities for growth, renewed appreciation for life, and the chance to help others facing similar journeys. Remember that you don't have to navigate survivorship alone - your healthcare team and support network are there to help you thrive in this new phase of life.",
+        
+        keyTakeaways: [
+          "Survivorship begins when active treatment ends",
+          "Regular follow-up care is crucial for long-term health",
+          "Healthy lifestyle choices support overall well-being",
+          "Emotional adjustment is a normal part of survivorship",
+          "Many resources are available to support your journey"
+        ]
+      }
+    },
+    "10": {
+      title: "Precision Medicine in Cancer Treatment: Personalized Therapy",
+      category: "Treatment Updates",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "December 22, 2024",
+      readTime: "9 min read",
+      image: blogPrecisionImage,
+      content: {
+        introduction: "Precision medicine represents a revolutionary approach to cancer treatment, moving away from one-size-fits-all therapies to treatments tailored to the unique genetic makeup of each patient's cancer. This personalized approach is transforming outcomes and offering new hope for patients.",
+        
+        sections: [
+          {
+            heading: "What is Precision Medicine?",
+            content: "Precision medicine uses information about a patient's genes, proteins, and environment to prevent, diagnose, and treat disease:",
+            type: "info",
+            items: [
+              "Analyzes the genetic mutations driving your specific cancer",
+              "Matches treatments to the molecular characteristics of tumors",
+              "Considers your genetic makeup and how you metabolize drugs",
+              "Uses biomarkers to predict treatment response",
+              "Integrates multiple data sources for treatment decisions",
+              "Allows for real-time adjustment of therapy based on response",
+              "Minimizes trial-and-error approach to treatment selection"
+            ]
+          },
+          {
+            heading: "How Genetic Testing Works",
+            content: "Understanding the genetic testing process that enables precision medicine:",
+            type: "highlight",
+            steps: [
+              "Tumor biopsy: Sample of cancer tissue is obtained",
+              "DNA/RNA extraction: Genetic material is isolated from the sample",
+              "Sequencing: Advanced machines read the genetic code",
+              "Analysis: Computers identify mutations and alterations",
+              "Interpretation: Specialists determine clinical significance",
+              "Treatment matching: Therapies are selected based on findings",
+              "Monitoring: Ongoing testing tracks treatment response and resistance"
+            ]
+          },
+          {
+            heading: "Types of Precision Treatments",
+            content: "Several categories of precision treatments are now available:",
+            type: "success",
+            items: [
+              "Targeted therapy: Drugs that target specific genetic mutations",
+              "Immunotherapy: Treatments based on immune system markers",
+              "Hormone therapy: Personalized based on receptor status",
+              "Precision chemotherapy: Dosing based on genetic metabolism",
+              "CAR-T cell therapy: Genetically modified immune cells",
+              "Radioligand therapy: Targeted radiation delivery",
+              "Combination therapies: Multiple precision treatments together"
+            ]
+          },
+          {
+            heading: "Benefits of Precision Medicine",
+            content: "Precision medicine offers numerous advantages over traditional approaches:",
+            type: "info",
+            items: [
+              "Higher response rates: Treatments are more likely to work",
+              "Reduced side effects: Avoid treatments unlikely to help",
+              "Faster treatment decisions: Less time spent on ineffective therapies",
+              "Better quality of life: More targeted, less toxic treatments",
+              "Improved survival outcomes: Earlier access to effective treatments",
+              "Cost-effective: Avoid expensive treatments that won't work",
+              "Future-proofing: Ability to adapt as cancer evolves"
+            ]
+          },
+          {
+            heading: "Current Applications",
+            content: "Precision medicine is already making a difference in many cancer types:",
+            type: "success",
+            items: [
+              "Lung cancer: EGFR, ALK, and other targeted therapies",
+              "Breast cancer: HER2 targeting and hormone receptor analysis",
+              "Melanoma: BRAF and MEK inhibitor combinations",
+              "Colorectal cancer: KRAS, BRAF, and microsatellite instability testing",
+              "Lymphomas: Genetic subtyping for treatment selection",
+              "Pediatric cancers: Rare genetic mutations and targeted drugs",
+              "Brain tumors: IDH mutations and methylation status"
+            ]
+          },
+          {
+            heading: "The Future of Precision Medicine",
+            content: "Exciting developments are on the horizon:",
+            type: "highlight",
+            items: [
+              "Liquid biopsies: Blood tests to detect circulating tumor DNA",
+              "Artificial intelligence: Machine learning to analyze complex data",
+              "Real-time monitoring: Continuous tracking of treatment response",
+              "Prevention strategies: Genetic testing for cancer risk",
+              "Drug development: Faster development of targeted therapies",
+              "Combination strategies: Optimal sequencing of multiple treatments",
+              "Global accessibility: Making precision medicine available worldwide"
+            ]
+          },
+          {
+            heading: "Getting Access to Precision Medicine",
+            content: "Steps to access precision medicine options:",
+            type: "warning",
+            items: [
+              "Discuss with your oncologist: Ask about genetic testing options",
+              "Insurance coverage: Understand what tests are covered",
+              "Clinical trials: Access to newest precision treatments",
+              "Tumor banking: Preserve tissue for future testing",
+              "Genetic counseling: Understand hereditary cancer risks",
+              "Second opinions: Specialized centers may offer more options",
+              "Patient advocacy: Organizations that help navigate access"
+            ]
+          }
+        ],
+        
+        conclusion: "Precision medicine is transforming cancer care by providing more effective, personalized treatments with fewer side effects. While not every cancer has precision medicine options yet, the field is rapidly advancing. Talk to your healthcare team about whether precision medicine approaches might be right for your specific cancer type and situation.",
+        
+        keyTakeaways: [
+          "Precision medicine tailors treatment to your cancer's genetic makeup",
+          "Genetic testing guides treatment selection and improves outcomes",
+          "Many precision treatments are already available for common cancers",
+          "Clinical trials provide access to the newest precision therapies",
+          "The future of cancer treatment is increasingly personalized"
+        ]
+      }
+    },
+    "11": {
+      title: "Cancer Prevention: Lifestyle Choices That Make a Difference",
+      category: "Prevention",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "December 20, 2024",
+      readTime: "8 min read",
+      image: blogPreventionImage,
+      content: {
+        introduction: "While not all cancers can be prevented, research shows that up to 50% of cancer cases could be avoided through healthy lifestyle choices and preventive measures. Understanding these evidence-based strategies empowers you to take control of your cancer risk.",
+        
+        sections: [
+          {
+            heading: "The Science of Cancer Prevention",
+            content: "Cancer prevention is based on decades of research showing how lifestyle factors influence cancer risk:",
+            type: "info",
+            items: [
+              "Cancer develops when normal cells become damaged and grow uncontrollably",
+              "Many factors can damage cells: tobacco, radiation, certain chemicals, infections",
+              "The body has natural repair mechanisms that can be supported by healthy choices",
+              "Some risk factors are controllable (diet, exercise), others are not (age, genetics)",
+              "Prevention strategies can significantly reduce risk for many cancer types",
+              "Early detection through screening is also a form of prevention",
+              "Population studies show clear links between lifestyle and cancer rates"
+            ]
+          },
+          {
+            heading: "Tobacco: The Leading Preventable Risk Factor",
+            content: "Tobacco use is responsible for about 30% of cancer deaths and is linked to many cancer types:",
+            type: "warning",
+            items: [
+              "Lung cancer: 85% of cases are caused by smoking",
+              "Other cancers: Bladder, kidney, pancreas, cervix, stomach, and more",
+              "Secondhand smoke: Also increases cancer risk for non-smokers",
+              "All forms harmful: Cigarettes, cigars, pipes, and smokeless tobacco",
+              "Quitting benefits: Risk decreases significantly within years of stopping",
+              "E-cigarettes: Long-term risks still being studied",
+              "Support available: Medications, counseling, and quitlines help"
+            ]
+          },
+          {
+            heading: "Diet and Nutrition for Cancer Prevention",
+            content: "What you eat can significantly influence your cancer risk:",
+            type: "success",
+            items: [
+              "Fruits and vegetables: Aim for 5-9 servings daily for protective nutrients",
+              "Whole grains: Choose brown rice, whole wheat, and oats over refined grains",
+              "Limit red meat: Especially processed meats like bacon and deli meats",
+              "Healthy fats: Include omega-3 fatty acids from fish and nuts",
+              "Limit alcohol: No more than 1 drink per day for women, 2 for men",
+              "Stay hydrated: Choose water over sugary drinks",
+              "Maintain healthy weight: Obesity is linked to 13 different cancer types"
+            ]
+          },
+          {
+            heading: "Physical Activity and Cancer Risk",
+            content: "Regular exercise provides powerful protection against cancer:",
+            type: "highlight",
+            items: [
+              "Recommended amount: At least 150 minutes of moderate activity per week",
+              "Types of activity: Walking, swimming, cycling, dancing, or sports",
+              "Weight management: Exercise helps maintain healthy body weight",
+              "Immune function: Physical activity boosts immune system strength",
+              "Hormone levels: Exercise helps regulate hormones linked to cancer",
+              "Digestive health: Movement promotes healthy digestion",
+              "Start slowly: Any increase in activity provides benefits"
+            ]
+          },
+          {
+            heading: "Sun Protection and Skin Cancer Prevention",
+            content: "Skin cancer is one of the most preventable types of cancer:",
+            type: "warning",
+            items: [
+              "Use sunscreen: SPF 30 or higher, applied generously and regularly",
+              "Seek shade: Especially between 10 AM and 4 PM when UV rays are strongest",
+              "Wear protective clothing: Long sleeves, wide-brimmed hats, and sunglasses",
+              "Avoid tanning beds: UV radiation from tanning beds is carcinogenic",
+              "Check your skin: Monthly self-exams and annual dermatologist visits",
+              "Know your moles: Watch for changes in size, shape, color, or texture",
+              "Children need protection: Sunburns in childhood increase lifelong risk"
+            ]
+          },
+          {
+            heading: "Infection Prevention",
+            content: "Certain infections can increase cancer risk, but many are preventable:",
+            type: "info",
+            items: [
+              "HPV vaccination: Prevents cervical and other cancers",
+              "Hepatitis B vaccination: Reduces liver cancer risk",
+              "Safe sex practices: Reduce risk of HPV and other infections",
+              "Food safety: Proper handling to prevent stomach cancer-causing bacteria",
+              "Regular health screenings: Early detection and treatment of infections",
+              "Hand hygiene: Simple but effective infection prevention",
+              "Travel precautions: Protect against infections in endemic areas"
+            ]
+          },
+          {
+            heading: "Environmental and Occupational Factors",
+            content: "Reducing exposure to cancer-causing substances in your environment:",
+            type: "success",
+            items: [
+              "Radon testing: Test your home for this leading cause of lung cancer",
+              "Asbestos awareness: Avoid exposure in older buildings",
+              "Chemical safety: Follow safety guidelines for household and work chemicals",
+              "Air quality: Support clean air initiatives and avoid polluted areas when possible",
+              "Water quality: Use appropriate filtration if needed",
+              "Workplace safety: Follow all safety protocols for hazardous materials",
+              "Home safety: Proper ventilation and maintenance reduce exposure risks"
+            ]
+          }
+        ],
+        
+        conclusion: "Cancer prevention is about making informed choices that reduce your risk while recognizing that not all cancers can be prevented. The good news is that many of the most effective prevention strategies - like not smoking, eating well, and staying active - also improve your overall health and quality of life. Start with small, sustainable changes and build on them over time.",
+        
+        keyTakeaways: [
+          "Up to 50% of cancers may be preventable through lifestyle choices",
+          "Tobacco cessation is the single most important prevention step",
+          "A healthy diet and regular exercise provide powerful protection",
+          "Sun protection prevents the most common type of cancer",
+          "Vaccination and infection prevention reduce cancer risk",
+          "Environmental awareness helps minimize exposure to carcinogens"
         ]
       }
     }
