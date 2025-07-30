@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import WhatsAppWidget from "./components/WhatsAppWidget";
+import Breadcrumbs from "./components/Breadcrumbs";
 import { lazy, Suspense } from "react";
 
 // Lazy load pages for better performance
@@ -21,6 +22,10 @@ const PatientPortal = lazy(() => import("./pages/PatientPortal"));
 const BookAppointment = lazy(() => import("./pages/BookAppointment"));
 const TreatmentTimeline = lazy(() => import("./components/TreatmentTimeline"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const FAQ = lazy(() => import("./pages/FAQ"));
+const PrepareVisit = lazy(() => import("./pages/PrepareVisit"));
 
 const queryClient = new QueryClient();
 
@@ -32,6 +37,7 @@ const App = () => (
       <BrowserRouter>
         <div className="min-h-screen flex flex-col">
           <Navigation />
+          <Breadcrumbs />
           <main className="flex-1">
             <Suspense fallback={
               <div className="min-h-screen flex items-center justify-center">
@@ -50,6 +56,10 @@ const App = () => (
                 <Route path="/patient-portal" element={<PatientPortal />} />
                 <Route path="/book-appointment" element={<BookAppointment />} />
                 <Route path="/treatment-timeline" element={<TreatmentTimeline />} />
+                <Route path="/terms" element={<TermsOfService />} />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/faq" element={<FAQ />} />
+                <Route path="/prepare-visit" element={<PrepareVisit />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
               </Routes>
