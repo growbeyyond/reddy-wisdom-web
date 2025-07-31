@@ -1,8 +1,13 @@
+# Medical Practice Website - Dr. Doe Oncology
+# Optimized for healthcare search engines and medical directories
+
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -12,3 +17,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+Disallow: /patient-portal/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://yoursite.lovable.app/sitemap.xml
