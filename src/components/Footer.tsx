@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import NewsletterSignup from './NewsletterSignup';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
@@ -41,43 +42,28 @@ const Footer = () => {
               <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Dr. Namratha</Link></li>
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link></li>
               <li><Link to="/education" className="text-muted-foreground hover:text-primary transition-colors">Cancer Education</Link></li>
-              <li><Link to="/patient-portal" className="text-muted-foreground hover:text-primary transition-colors">Patient Portal</Link></li>
+              <li><Link to="/book-appointment" className="text-muted-foreground hover:text-primary transition-colors">Book Appointment</Link></li>
+              <li><Link to="/upload-documents" className="text-muted-foreground hover:text-primary transition-colors">Upload Documents</Link></li>
+              <li><Link to="/treatment-checklist" className="text-muted-foreground hover:text-primary transition-colors">Treatment Checklist</Link></li>
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Patient Resources */}
           <div className="space-y-4">
-            <h3 className="font-heading font-semibold text-foreground">Services</h3>
+            <h3 className="font-heading font-semibold text-foreground">Patient Resources</h3>
             <ul className="space-y-2">
-              <li><span className="text-muted-foreground">Cancer Consultations</span></li>
-              <li><span className="text-muted-foreground">Chemotherapy</span></li>
-              <li><span className="text-muted-foreground">Immunotherapy</span></li>
-              <li><span className="text-muted-foreground">Targeted Therapy</span></li>
-              <li><span className="text-muted-foreground">Second Opinions</span></li>
+              <li><Link to="/tools/symptom-checker" className="text-muted-foreground hover:text-primary transition-colors">Symptom Checker</Link></li>
+              <li><Link to="/tools/risk-assessment" className="text-muted-foreground hover:text-primary transition-colors">Risk Assessment</Link></li>
+              <li><Link to="/prepare-visit" className="text-muted-foreground hover:text-primary transition-colors">Prepare for Visit</Link></li>
+              <li><Link to="/patient-portal" className="text-muted-foreground hover:text-primary transition-colors">Patient Portal</Link></li>
+              <li><Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Newsletter Signup */}
           <div className="space-y-4">
-            <h3 className="font-heading font-semibold text-foreground">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-start gap-3">
-                <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">
-                  American Oncology Institute<br />
-                  Nallagandla, Hyderabad<br />
-                  Telangana, India
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground">+91 91556 67758</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">drbijivemulanamratha.official@gmail.com</span>
-              </div>
-            </div>
+            <NewsletterSignup variant="compact" />
           </div>
         </div>
 

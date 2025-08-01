@@ -23,6 +23,9 @@ const RiskAssessment = lazy(() => import("./pages/RiskAssessment"));
 const Contact = lazy(() => import("./pages/Contact"));
 const PatientPortal = lazy(() => import("./pages/PatientPortal"));
 const BookAppointment = lazy(() => import("./pages/BookAppointment"));
+const DocumentUploadPage = lazy(() => import("./pages/DocumentUploadPage"));
+const TreatmentChecklistPage = lazy(() => import("./pages/TreatmentChecklistPage"));
+const NewsletterPage = lazy(() => import("./pages/NewsletterPage"));
 const TreatmentTimeline = lazy(() => import("./components/TreatmentTimeline"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
@@ -60,6 +63,9 @@ const App = () => (
                   <Route path="/contact" element={<Contact />} />
                   <Route path="/patient-portal" element={<PatientPortal />} />
                   <Route path="/book-appointment" element={<BookAppointment />} />
+                  <Route path="/upload-documents" element={<DocumentUploadPage />} />
+                  <Route path="/treatment-checklist" element={<TreatmentChecklistPage />} />
+                  <Route path="/newsletter" element={<NewsletterPage />} />
                   <Route path="/treatment-timeline" element={<TreatmentTimeline />} />
                   <Route path="/terms" element={<TermsOfService />} />
                   <Route path="/privacy" element={<PrivacyPolicy />} />
