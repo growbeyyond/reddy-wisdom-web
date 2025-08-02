@@ -1,0 +1,2 @@
+-- Create edge function for Google Reviews API
+-- This will be handled by the edge function creation
