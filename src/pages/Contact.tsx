@@ -1,8 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
+import ContactForm from '@/components/ContactForm';
 import { 
   MapPin, 
   Phone, 
@@ -156,64 +155,7 @@ const Contact = () => {
               </h2>
               <Card className="medical-card">
                 <CardContent className="p-6">
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
-                        </label>
-                        <Input placeholder="Enter your first name" />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
-                        </label>
-                        <Input placeholder="Enter your last name" />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Email Address *
-                      </label>
-                      <Input type="email" placeholder="Enter your email" />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Phone Number *
-                      </label>
-                      <Input type="tel" placeholder="+91 Your phone number" />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Consultation Type
-                      </label>
-                      <select className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary">
-                        <option>Select consultation type</option>
-                        <option>Initial Consultation</option>
-                        <option>Second Opinion</option>
-                        <option>Follow-up Visit</option>
-                        <option>Emergency Consultation</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">
-                        Message
-                      </label>
-                      <Textarea 
-                        placeholder="Please describe your condition or questions..."
-                        rows={4}
-                      />
-                    </div>
-                    
-                    <Button type="submit" variant="appointment" size="lg" className="w-full">
-                      <Send className="h-5 w-5 mr-2" />
-                      Send Message
-                    </Button>
-                  </form>
+                  <ContactForm />
                 </CardContent>
               </Card>
             </div>

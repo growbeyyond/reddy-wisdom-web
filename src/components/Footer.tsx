@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Star, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import NewsletterSignup from './NewsletterSignup';
 import logo from '@/assets/logo.png';
@@ -22,9 +22,9 @@ const Footer = () => {
                   <Facebook className="h-4 w-4" />
                 </Button>
               </a>
-              <a href="https://www.instagram.com/drbijivemulanamratha/" target="_blank" rel="noopener noreferrer">
+              <a href="https://g.page/r/YOUR_GOOGLE_BUSINESS_REVIEW_LINK" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="hover:text-primary">
-                  <Instagram className="h-4 w-4" />
+                  <Star className="h-4 w-4" />
                 </Button>
               </a>
               <a href="https://x.com/Dr_Bijivemula" target="_blank" rel="noopener noreferrer">
