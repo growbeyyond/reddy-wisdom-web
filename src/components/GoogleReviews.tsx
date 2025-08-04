@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Star, ExternalLink, RefreshCw, Settings } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
@@ -26,15 +27,12 @@ const GoogleReviews = () => {
   const [placeDetails, setPlaceDetails] = useState<PlaceDetails | null>(null);
   const [loading, setLoading] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
-  const [placeId, setPlaceId] = useState('');
+  const [placeId, setPlaceId] = useState('ChIJz8EfYOuM1ToR-GTFSxahWvk'); // Dr. Namratha's Place ID
   const { toast } = useToast();
 
   useEffect(() => {
-    const storedPlaceId = localStorage.getItem('google_place_id');
-    if (storedPlaceId) {
-      setPlaceId(storedPlaceId);
-      fetchGoogleReviews(storedPlaceId);
-    }
+    // Auto-load reviews when component mounts
+    fetchGoogleReviews(placeId);
   }, []);
 
   const fetchGoogleReviews = async (googlePlaceId: string) => {
@@ -49,13 +47,20 @@ const GoogleReviews = () => {
 
     setLoading(true);
     try {
+      console.log('Fetching Google reviews for Place ID:', googlePlaceId);
+      
       const { data, error } = await supabase.functions.invoke('google-reviews', {
         body: { placeId: googlePlaceId }
       });
 
-      if (error) throw error;
+      if (error) {
+        console.error('Supabase function error:', error);
+        throw error;
+      }
 
+      console.log('Google Reviews data received:', data);
       setPlaceDetails(data);
+      
       toast({
         title: "Reviews Updated",
         description: `Loaded ${data.reviews?.length || 0} Google reviews`,
@@ -65,7 +70,7 @@ const GoogleReviews = () => {
       toast({
         variant: "destructive",
         title: "Error",
-        description: "Failed to load Google reviews. Please check your configuration.",
+        description: "Failed to load Google reviews. Please check your configuration and API key.",
       });
     } finally {
       setLoading(false);
@@ -170,32 +175,6 @@ const GoogleReviews = () => {
     );
   }
 
-  if (!placeId) {
-    return (
-      <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="container">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="medical-card p-8">
-              <Star className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-              <h3 className="text-2xl font-heading font-bold mb-4">
-                Google Reviews Not Configured
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                Configure your Google Place ID to display reviews and ratings
-              </p>
-              <button 
-                onClick={() => setShowSettings(true)} 
-                className="medical-button"
-              >
-                Setup Google Reviews
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
   if (loading) {
     return (
       <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
@@ -211,7 +190,7 @@ const GoogleReviews = () => {
     );
   }
 
-  if (!placeDetails || !placeDetails.reviews) {
+  if (!placeDetails || !placeDetails.reviews || placeDetails.reviews.length === 0) {
     return (
       <section className="py-16 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container">
@@ -219,10 +198,10 @@ const GoogleReviews = () => {
             <div className="medical-card p-8">
               <Star className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <h3 className="text-2xl font-heading font-bold mb-4">
-                No Reviews Found
+                Loading Reviews...
               </h3>
               <p className="text-muted-foreground mb-6">
-                Unable to load Google reviews. Please check your configuration.
+                We're fetching the latest Google reviews for Dr. Namratha's practice.
               </p>
               <div className="flex gap-3 justify-center">
                 <button 
