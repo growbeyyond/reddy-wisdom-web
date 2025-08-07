@@ -37,7 +37,8 @@ const Education = () => {
 
   const blogCategories = [
     'All', 'Breast Cancer', 'Lung Cancer', 'Prostate Cancer', 'Colorectal Cancer', 'Prevention', 
-    'Treatment Updates', 'Nutrition', 'Mental Health', 'Research', 'Survivorship', 'Precision Medicine'
+    'Treatment Updates', 'Nutrition', 'Mental Health', 'Research', 'Survivorship', 'Precision Medicine',
+    'Technology', 'Diagnostics'
   ];
 
   const featuredBlogs = [
@@ -157,6 +158,42 @@ const Education = () => {
       publishDate: "July 27, 2025",
       author: "Dr. Namratha Sai Reddy",
       image: preventionLifestyleImg
+    },
+    {
+      id: 12,
+      title: "AI-Powered Cancer Diagnosis: How Artificial Intelligence is Revolutionizing Early Detection in 2025",
+      excerpt: "Discover how AI technology is detecting cancer earlier and more accurately than ever before, potentially saving millions of lives through revolutionary diagnostic capabilities.",
+      category: "Technology",
+      readTime: "11 min read",
+      publishDate: "August 1, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: precisionMedicineImg,
+      featured: true,
+      trending: true
+    },
+    {
+      id: 13,
+      title: "Liquid Biopsy Breakthrough: Blood Tests That Detect Cancer Before Symptoms Appear",
+      excerpt: "Revolutionary blood test technology that identifies circulating tumor DNA months before symptoms develop, transforming cancer prevention strategies.",
+      category: "Diagnostics",
+      readTime: "9 min read",
+      publishDate: "August 4, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: preventionLifestyleImg,
+      featured: true,
+      trending: true
+    },
+    {
+      id: 14,
+      title: "CAR-T Cell Therapy Success Stories: Revolutionary Cancer Treatment Changing Lives in 2025",
+      excerpt: "Real patient experiences with CAR-T cell therapy demonstrate how this groundbreaking immunotherapy is curing previously incurable blood cancers.",
+      category: "Treatment Updates",
+      readTime: "12 min read",
+      publishDate: "August 7, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: immunotherapyImg,
+      featured: true,
+      trending: true
     }
   ];
 
