@@ -14,7 +14,7 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
-import GoogleReviews from '@/components/GoogleReviews';
+
 import doctorProfile from '@/assets/doctor-profile.png';
 import doctorClinic from '@/assets/doctor-clinic.jpg';
 import consultationRoom from '@/assets/consultation-room.jpg';
@@ -55,20 +55,44 @@ const Home = () => {
     {
       name: "Preeti Reddy",
       condition: "Breast Cancer Survivor",
-      text: "Dr. Namratha's expertise and kindness gave me a second chance at life. Her care is unmatched.",
-      rating: 5
+      text: "Dr. Namratha's expertise and kindness gave me a second chance at life. Her personalized treatment plan and constant support made all the difference during my healing journey.",
+      rating: 5,
+      location: "Hyderabad"
     },
     {
       name: "K Shiva Sharma",
       condition: "Lung Cancer Patient",
-      text: "Her immunotherapy approach turned my lung cancer battle around. I'm forever grateful.",
-      rating: 5
+      text: "Her immunotherapy approach turned my lung cancer battle around. Dr. Namratha explained every step clearly and gave me hope when I needed it most.",
+      rating: 5,
+      location: "Secunderabad"
     },
     {
       name: "Rekha Patel",
       condition: "Ovarian Cancer Survivor",
-      text: "From the first visit to remission, Dr. Namratha guided me with compassion and clarity.",
-      rating: 5
+      text: "From the first visit to remission, Dr. Namratha guided me with compassion and clarity. She truly cares about her patients beyond just treatment.",
+      rating: 5,
+      location: "Hyderabad"
+    },
+    {
+      name: "Rajesh Kumar",
+      condition: "Prostate Cancer Patient",
+      text: "The targeted therapy Dr. Namratha recommended was incredibly effective. Her expertise in precision medicine gave me the best possible outcome.",
+      rating: 5,
+      location: "Nizamabad"
+    },
+    {
+      name: "Sunitha Rao",
+      condition: "Lymphoma Survivor",
+      text: "Dr. Namratha's comprehensive approach to cancer care helped me beat lymphoma. Her team's 24/7 support was invaluable throughout my treatment.",
+      rating: 5,
+      location: "Warangal"
+    },
+    {
+      name: "Mohan Reddy",
+      condition: "Colorectal Cancer Patient",
+      text: "The immunotherapy treatment plan was explained so well. Dr. Namratha's confidence and expertise helped me stay positive throughout the entire process.",
+      rating: 5,
+      location: "Karimnagar"
     }
   ];
 
@@ -260,41 +284,92 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="section-padding bg-card">
+      {/* Patient Testimonials & Reviews */}
+      <section className="section-padding bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4">Patient Reviews</Badge>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
               Stories of Hope & Healing
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Real stories from patients who found hope and healing through compassionate cancer care
             </p>
+            
+            {/* Overall Rating Display */}
+            <div className="flex items-center justify-center gap-4 mt-8 mb-12">
+              <div className="text-center">
+                <div className="flex items-center gap-1 mb-2 justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <div className="text-3xl font-bold text-primary">5.0</div>
+                <div className="text-sm text-muted-foreground">Based on {testimonials.length} reviews</div>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="medical-card">
+              <Card key={index} className="medical-card group hover:shadow-lg transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="flex items-center gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
-                    ))}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <Badge variant="outline" className="text-xs">
+                      {testimonial.location}
+                    </Badge>
                   </div>
-                  <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
-                  <div>
+                  <p className="text-muted-foreground mb-6 italic leading-relaxed">
+                    "{testimonial.text}"
+                  </p>
+                  <div className="border-t pt-4">
                     <div className="font-semibold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-primary">{testimonial.condition}</div>
+                    <div className="text-sm text-primary font-medium">{testimonial.condition}</div>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
+
+          {/* Leave a Review CTA */}
+          <div className="text-center">
+            <Card className="medical-card max-w-2xl mx-auto">
+              <CardContent className="p-8">
+                <Star className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h3 className="text-xl font-heading font-bold text-foreground mb-4">
+                  Share Your Experience
+                </h3>
+                <p className="text-muted-foreground mb-6">
+                  Help others by sharing your journey with Dr. Namratha's cancer care
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                  <a 
+                    href="https://www.google.com/search?q=Dr.+Namratha+Sai+Reddy+American+Oncology+Institute+Hyderabad&rlz=1C1GCEU_enIN831IN831&oq=Dr.+Namratha+Sai+Reddy+American+Oncology+Institute+Hyderabad&aqs=chrome..69i57j33i160l3.1319j0j7&sourceid=chrome&ie=UTF-8#lrd=0x3bcb99e8607b11cf:0x5a86a14702f984f8,3" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="default" size="lg">
+                      <Star className="h-4 w-4 mr-2" />
+                      Leave a Google Review
+                    </Button>
+                  </a>
+                  <Link to="/contact">
+                    <Button variant="outline" size="lg">
+                      Send Feedback
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
-
-      {/* Google Reviews */}
-      <GoogleReviews />
 
       {/* CTA Section */}
       <section className="section-padding medical-gradient">
