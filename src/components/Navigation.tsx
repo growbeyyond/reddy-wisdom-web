@@ -1,12 +1,21 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Calendar } from 'lucide-react';
+import { Menu, X, Phone, Calendar, User, LogOut, Shield } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { useAuth } from '@/hooks/useAuth';
 import logo from '@/assets/logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user, profile, signOut } = useAuth();
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -47,6 +56,41 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
+            {user ? (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" size="sm" className="flex items-center gap-2">
+                    <Shield className="h-4 w-4" />
+                    <span className="hidden xl:inline">{profile?.full_name || user.email}</span>
+                    <User className="h-4 w-4 xl:hidden" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="w-56">
+                  <DropdownMenuItem disabled>
+                    <span className="text-sm text-muted-foreground">{user.email}</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link to="/patient-portal" className="flex items-center">
+                      <User className="h-4 w-4 mr-2" />
+                      Patient Portal
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem onClick={signOut} className="text-red-600">
+                    <LogOut className="h-4 w-4 mr-2" />
+                    Sign Out
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link to="/auth">
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <Shield className="h-4 w-4" />
+                  <span className="hidden xl:inline">Patient Login</span>
+                </Button>
+              </Link>
+            )}
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
               <span className="hidden xl:inline">+91 91556 67758</span>
@@ -87,6 +131,39 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
+                {user ? (
+                  <>
+                    <div className="px-3 py-2 text-sm text-muted-foreground border rounded-md">
+                      <Shield className="h-4 w-4 inline mr-2" />
+                      {profile?.full_name || user.email}
+                    </div>
+                    <Link to="/patient-portal" onClick={() => setIsOpen(false)}>
+                      <Button variant="outline" size="sm" className="w-full justify-center">
+                        <User className="h-4 w-4 mr-2" />
+                        Patient Portal
+                      </Button>
+                    </Link>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="justify-center text-red-600 hover:text-red-600"
+                      onClick={() => {
+                        setIsOpen(false);
+                        signOut();
+                      }}
+                    >
+                      <LogOut className="h-4 w-4 mr-2" />
+                      Sign Out
+                    </Button>
+                  </>
+                ) : (
+                  <Link to="/auth" onClick={() => setIsOpen(false)}>
+                    <Button variant="outline" size="sm" className="w-full justify-center">
+                      <Shield className="h-4 w-4 mr-2" />
+                      Patient Login
+                    </Button>
+                  </Link>
+                )}
                 <Button variant="outline" size="sm" className="justify-center">
                   <Phone className="h-4 w-4 mr-2" />
                   Call +91 91556 67758

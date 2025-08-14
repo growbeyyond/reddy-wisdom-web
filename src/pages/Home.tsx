@@ -371,6 +371,67 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Patient Portal Section */}
+      <section className="section-padding bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
+              Secure Patient Portal
+            </h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Access your medical records, book appointments, and manage your healthcare journey 
+              with our HIPAA-compliant patient portal.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <Card className="text-center p-6">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">Secure Access</h3>
+              <p className="text-sm text-muted-foreground">
+                Enterprise-grade security protects your sensitive medical information
+              </p>
+            </Card>
+            
+            <Card className="text-center p-6">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calendar className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">Easy Booking</h3>
+              <p className="text-sm text-muted-foreground">
+                Schedule appointments and manage your treatment timeline online
+              </p>
+            </Card>
+            
+            <Card className="text-center p-6">
+              <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-semibold mb-2">Complete Care</h3>
+              <p className="text-sm text-muted-foreground">
+                Upload documents, track medications, and access your treatment checklist
+              </p>
+            </Card>
+          </div>
+          
+          <div className="text-center">
+            <Link to="/auth">
+              <Button size="lg" className="mr-4">
+                <Shield className="h-5 w-5 mr-2" />
+                Access Patient Portal
+              </Button>
+            </Link>
+            <Link to="/patient-portal">
+              <Button variant="outline" size="lg">
+                Learn More
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="section-padding medical-gradient">
         <div className="max-w-4xl mx-auto text-center">
