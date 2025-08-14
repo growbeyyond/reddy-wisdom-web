@@ -29,6 +29,7 @@ import blogMentalHealthImage from '@/assets/blog-mental-health.jpg';
 import blogSurvivorshipImage from '@/assets/blog-survivorship.jpg';
 import blogPrecisionImage from '@/assets/blog-precision-medicine.jpg';
 import blogPreventionImage from '@/assets/blog-prevention-lifestyle.jpg';
+import blogLiquidBiopsyImage from '@/assets/blog-liquid-biopsy.jpg';
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -1270,7 +1271,7 @@ const BlogPost = () => {
       author: "Dr. Namratha Sai Reddy",
       publishDate: "August 4, 2025",
       readTime: "9 min read",
-      image: blogPreventionImage,
+      image: blogLiquidBiopsyImage,
       content: {
         introduction: "Liquid biopsy technology is revolutionizing cancer detection through simple blood tests that can identify circulating tumor DNA (ctDNA) months or even years before symptoms develop. This breakthrough screening method promises to transform cancer prevention and early intervention strategies.",
         
