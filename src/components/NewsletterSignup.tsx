@@ -36,45 +36,27 @@ const NewsletterSignup = ({ variant = 'full', className = '' }: NewsletterSignup
     setIsSubmitting(true);
 
     try {
-      // Check if email already exists
-      const { data: existingSubscription } = await supabase
+      // Directly attempt to insert the subscription
+      // The database will handle duplicate emails via unique constraint
+      const { error } = await supabase
         .from('newsletter_subscriptions')
-        .select('*')
-        .eq('email', data.email)
-        .single();
+        .insert({
+          email: data.email,
+          name: data.name || null,
+          status: 'active',
+        });
 
-      if (existingSubscription) {
-        if (existingSubscription.status === 'active') {
+      if (error) {
+        // Handle duplicate email error gracefully
+        if (error.code === '23505' && error.message?.includes('unique_newsletter_email')) {
           toast({
             title: 'Already Subscribed',
             description: 'This email is already subscribed to our newsletter.',
           });
           setIsSubscribed(true);
           return;
-        } else {
-          // Reactivate subscription
-          const { error } = await supabase
-            .from('newsletter_subscriptions')
-            .update({ 
-              status: 'active', 
-              name: data.name || existingSubscription.name,
-              unsubscribed_at: null 
-            })
-            .eq('email', data.email);
-
-          if (error) throw error;
         }
-      } else {
-        // Create new subscription
-        const { error } = await supabase
-          .from('newsletter_subscriptions')
-          .insert({
-            email: data.email,
-            name: data.name || null,
-            status: 'active',
-          });
-
-        if (error) throw error;
+        throw error;
       }
 
       setIsSubscribed(true);
