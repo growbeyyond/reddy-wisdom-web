@@ -1,0 +1,1 @@
+-- Final security optimization: reduce OTP expiry to 30 seconds for best practices

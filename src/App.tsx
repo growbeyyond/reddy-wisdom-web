@@ -29,7 +29,7 @@ const BookAppointment = lazy(() => import("./pages/BookAppointment"));
 const DocumentUploadPage = lazy(() => import("./pages/DocumentUploadPage"));
 const TreatmentChecklistPage = lazy(() => import("./pages/TreatmentChecklistPage"));
 const NewsletterPage = lazy(() => import("./pages/NewsletterPage"));
-const TreatmentTimeline = lazy(() => import("./components/TreatmentTimeline"));
+const TreatmentTimeline = lazy(() => import("./pages/TreatmentTimeline"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
