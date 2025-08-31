@@ -31,6 +31,18 @@ import blogPrecisionImage from '@/assets/blog-precision-medicine.jpg';
 import blogPreventionImage from '@/assets/blog-prevention-lifestyle.jpg';
 import blogLiquidBiopsyImage from '@/assets/blog-liquid-biopsy.jpg';
 
+// August 2025 blog images
+import blogCancerPreventionAugust from '@/assets/blog-cancer-prevention-august.jpg';
+import blogRadiationTherapyAugust from '@/assets/blog-radiation-therapy-august.jpg';
+import blogSupportSystemsAugust from '@/assets/blog-support-systems-august.jpg';
+import blogGeneticTestingAugust from '@/assets/blog-genetic-testing-august.jpg';
+import blogPalliativeCareAugust from '@/assets/blog-palliative-care-august.jpg';
+import blogChemotherapyAdvancesAugust from '@/assets/blog-chemotherapy-advances-august.jpg';
+import blogSurvivorStoriesAugust from '@/assets/blog-survivor-stories-august.jpg';
+import blogResearchBreakthroughsAugust from '@/assets/blog-research-breakthroughs-august.jpg';
+import blogSurgicalInnovationsAugust from '@/assets/blog-surgical-innovations-august.jpg';
+import blogIntegrativeMedicineAugust from '@/assets/blog-integrative-medicine-august.jpg';
+
 const BlogPost = () => {
   const { id } = useParams();
 
@@ -1492,6 +1504,743 @@ const BlogPost = () => {
           "Single treatment can provide years-long remissions",
           "Side effects are significant but manageable with proper care",
           "Ongoing research expanding applications to more cancer types"
+        ]
+      }
+    },
+    // August 2025 Blog Posts by Dr. Namratha Sai Reddy
+    "15": {
+      title: "Cancer Prevention Strategies: Evidence-Based Lifestyle Modifications for 2025",
+      category: "Prevention & Lifestyle",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 10, 2025",
+      readTime: "9 min read",
+      image: blogCancerPreventionAugust,
+      content: {
+        introduction: "Cancer prevention remains one of the most powerful tools in our fight against this disease. Dr. Namratha Sai Reddy shares the latest evidence-based strategies that can significantly reduce your cancer risk through proven lifestyle modifications and preventive measures.",
+        
+        sections: [
+          {
+            heading: "The Power of Diet in Cancer Prevention",
+            content: "Research consistently shows that dietary choices can reduce cancer risk by up to 30%. Focus on anti-inflammatory foods, antioxidant-rich vegetables, and limit processed foods:",
+            type: "success",
+            items: [
+              "Consume 5-9 servings of colorful fruits and vegetables daily",
+              "Choose whole grains over refined carbohydrates",
+              "Include omega-3 rich fish twice weekly",
+              "Limit red meat to less than 3 servings per week",
+              "Avoid processed meats and excessive alcohol consumption"
+            ]
+          },
+          {
+            heading: "Exercise and Physical Activity Guidelines",
+            content: "Dr. Namratha Sai Reddy emphasizes that regular physical activity can reduce cancer risk by 20-30% across multiple cancer types:",
+            type: "info",
+            items: [
+              "Aim for 150 minutes of moderate-intensity exercise weekly",
+              "Include strength training exercises twice per week",
+              "Maintain a healthy body weight (BMI 18.5-24.9)",
+              "Take walking breaks every hour during sedentary work",
+              "Consider high-intensity interval training for enhanced benefits"
+            ]
+          },
+          {
+            heading: "Environmental Risk Reduction",
+            content: "Protecting yourself from environmental carcinogens is crucial for cancer prevention:",
+            type: "warning",
+            items: [
+              "Use sunscreen with SPF 30+ daily and avoid peak UV hours",
+              "Test your home for radon levels",
+              "Avoid tobacco smoke and secondhand smoke exposure",
+              "Choose organic produce when possible to reduce pesticide exposure",
+              "Use air purifiers in polluted environments"
+            ]
+          },
+          {
+            heading: "Screening and Early Detection",
+            content: "Early detection through regular screening can prevent cancer development or catch it at its most treatable stages:",
+            type: "highlight",
+            items: [
+              "Mammograms annually after age 40 for breast cancer",
+              "Colonoscopy every 10 years starting at age 45",
+              "Pap smears every 3 years for cervical cancer",
+              "Annual skin checks with a dermatologist",
+              "HPV vaccination for eligible individuals"
+            ]
+          }
+        ],
+        
+        conclusion: "Cancer prevention is a lifelong commitment that requires consistent healthy choices. By implementing these evidence-based strategies, you can significantly reduce your cancer risk. As Dr. Namratha Sai Reddy always tells her patients, prevention is not just about avoiding cancer—it's about optimizing your overall health and quality of life.",
+        
+        keyTakeaways: [
+          "Diet and exercise can reduce cancer risk by 20-30%",
+          "Environmental awareness and protection are essential",
+          "Regular screening enables early detection and prevention",
+          "Lifestyle modifications have cumulative protective effects",
+          "Prevention strategies should start as early as possible"
+        ]
+      }
+    },
+    "16": {
+      title: "Advanced Radiation Therapy Techniques: Precision Cancer Treatment in 2025",
+      category: "Treatment Innovations",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 13, 2025",
+      readTime: "8 min read",
+      image: blogRadiationTherapyAugust,
+      content: {
+        introduction: "Radiation therapy has undergone revolutionary advances in recent years. Dr. Namratha Sai Reddy explores the cutting-edge techniques that are making radiation therapy more precise, effective, and safer than ever before, offering new hope for cancer patients worldwide.",
+        
+        sections: [
+          {
+            heading: "Stereotactic Radiosurgery and SBRT",
+            content: "These ultra-precise techniques deliver high doses of radiation to tumors while sparing healthy tissue:",
+            type: "info",
+            items: [
+              "Gamma Knife technology for brain tumors",
+              "CyberKnife for moving targets and hard-to-reach tumors",
+              "SBRT for lung, liver, and spine metastases",
+              "Real-time imaging guidance for accuracy",
+              "Fewer treatment sessions with higher efficacy"
+            ]
+          },
+          {
+            heading: "Image-Guided Radiation Therapy (IGRT)",
+            content: "IGRT represents a major advancement in treatment precision, allowing real-time tumor tracking:",
+            type: "success",
+            items: [
+              "Daily CT scans ensure accurate tumor targeting",
+              "Cone-beam CT for setup verification",
+              "MRI-guided radiation therapy for soft tissue visualization",
+              "4D imaging accounts for breathing and organ movement",
+              "Adaptive planning adjusts for anatomical changes"
+            ]
+          },
+          {
+            heading: "Proton Beam Therapy",
+            content: "Dr. Namratha Sai Reddy explains how proton therapy offers unique advantages for certain cancers:",
+            type: "highlight",
+            items: [
+              "Precise dose deposition with minimal exit radiation",
+              "Ideal for pediatric cancers to protect developing organs",
+              "Excellent for tumors near critical structures",
+              "Reduced risk of secondary cancers",
+              "Pencil beam scanning for enhanced precision"
+            ]
+          },
+          {
+            heading: "Side Effect Management and Quality of Life",
+            content: "Modern radiation therapy focuses on minimizing side effects while maintaining treatment efficacy:",
+            type: "warning",
+            benefits: [
+              "Shorter treatment courses reduce patient burden",
+              "Hypofractionation delivers higher doses per session",
+              "Advanced planning reduces healthy tissue exposure",
+              "Prophylactic medications prevent acute side effects"
+            ],
+            sideEffects: [
+              "Skin irritation and fatigue (usually mild and temporary)",
+              "Site-specific effects depending on treatment area",
+              "Late effects rare with modern techniques",
+              "Regular monitoring ensures early intervention"
+            ]
+          }
+        ],
+        
+        conclusion: "The field of radiation oncology continues to evolve rapidly, with new technologies offering improved outcomes and reduced side effects. Dr. Namratha Sai Reddy emphasizes that these advances mean patients can receive more effective treatment with better quality of life than ever before.",
+        
+        keyTakeaways: [
+          "Modern radiation therapy is more precise and safer",
+          "IGRT and stereotactic techniques improve targeting accuracy",
+          "Proton therapy offers advantages for specific cases",
+          "Treatment courses are shorter with maintained efficacy",
+          "Side effects are minimized with advanced planning"
+        ]
+      }
+    },
+    "17": {
+      title: "Building Strong Support Systems: Emotional and Social Care During Cancer Treatment",
+      category: "Patient Support",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 16, 2025",
+      readTime: "7 min read",
+      image: blogSupportSystemsAugust,
+      content: {
+        introduction: "Cancer treatment affects not just the body, but the mind and spirit as well. Dr. Namratha Sai Reddy emphasizes that strong support systems are crucial for successful treatment outcomes and overall well-being throughout the cancer journey.",
+        
+        sections: [
+          {
+            heading: "The Importance of Family and Friends",
+            content: "Your closest relationships form the foundation of your support network during cancer treatment:",
+            type: "success",
+            items: [
+              "Open communication about needs and concerns",
+              "Practical support with daily activities and appointments",
+              "Emotional presence during difficult moments",
+              "Maintaining normalcy and continuing relationships",
+              "Respecting the patient's autonomy and decisions"
+            ]
+          },
+          {
+            heading: "Professional Support Services",
+            content: "Dr. Namratha Sai Reddy works with a comprehensive team to provide holistic care:",
+            type: "info",
+            items: [
+              "Oncology social workers for resource navigation",
+              "Psychologists and counselors for emotional support",
+              "Patient navigators to guide treatment journey",
+              "Nutritionists for dietary guidance during treatment",
+              "Chaplains and spiritual care providers"
+            ]
+          },
+          {
+            heading: "Support Groups and Peer Networks",
+            content: "Connecting with others who understand your experience can be incredibly healing:",
+            type: "highlight",
+            items: [
+              "In-person support groups at treatment centers",
+              "Online communities for 24/7 accessibility",
+              "Cancer-specific support groups for targeted understanding",
+              "Survivor mentorship programs",
+              "Family support groups for caregivers"
+            ]
+          },
+          {
+            heading: "Self-Care and Mental Health Strategies",
+            content: "Taking care of your emotional well-being is essential for treatment success:",
+            type: "warning",
+            items: [
+              "Mindfulness and meditation practices",
+              "Journaling to process emotions and experiences",
+              "Creative therapies like art and music",
+              "Gentle exercise and movement as tolerated",
+              "Professional counseling when needed"
+            ]
+          }
+        ],
+        
+        conclusion: "Building and maintaining strong support systems is not a luxury—it's a necessity during cancer treatment. Dr. Namratha Sai Reddy reminds patients that asking for help is a sign of strength, not weakness, and that comprehensive support leads to better treatment outcomes and quality of life.",
+        
+        keyTakeaways: [
+          "Support systems significantly impact treatment outcomes",
+          "Professional and peer support complement family care",
+          "Open communication strengthens relationships",
+          "Self-care is essential for emotional well-being",
+          "Multiple support sources provide comprehensive care"
+        ]
+      }
+    },
+    "18": {
+      title: "Genetic Testing and Hereditary Cancer: Personalized Prevention Strategies",
+      category: "Genetic Medicine",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 19, 2025",
+      readTime: "10 min read",
+      image: blogGeneticTestingAugust,
+      content: {
+        introduction: "Genetic testing has revolutionized our understanding of cancer risk and prevention. Dr. Namratha Sai Reddy explains how genetic information can guide personalized prevention strategies and treatment decisions for patients and their families.",
+        
+        sections: [
+          {
+            heading: "Understanding Hereditary Cancer Syndromes",
+            content: "Approximately 5-10% of cancers are caused by inherited genetic mutations. Key syndromes include:",
+            type: "info",
+            items: [
+              "BRCA1/BRCA2 mutations: Breast and ovarian cancer risk",
+              "Lynch syndrome: Colorectal and endometrial cancer",
+              "Li-Fraumeni syndrome: Multiple cancer types",
+              "PTEN hamartoma syndrome: Breast, thyroid, and other cancers",
+              "Familial adenomatous polyposis: Colorectal cancer"
+            ]
+          },
+          {
+            heading: "Who Should Consider Genetic Testing?",
+            content: "Dr. Namratha Sai Reddy recommends genetic counseling and testing for individuals with:",
+            type: "warning",
+            items: [
+              "Strong family history of cancer (multiple relatives, young age at diagnosis)",
+              "Personal history of cancer at an unusually young age",
+              "Multiple primary cancers in the same individual",
+              "Rare cancers or specific cancer patterns in the family",
+              "Ashkenazi Jewish ancestry with breast/ovarian cancer history"
+            ]
+          },
+          {
+            heading: "The Genetic Testing Process",
+            content: "Genetic testing involves several important steps to ensure appropriate care:",
+            type: "success",
+            items: [
+              "Pre-test genetic counseling to discuss risks and benefits",
+              "Informed consent process explaining possible outcomes",
+              "DNA sample collection (usually blood or saliva)",
+              "Laboratory analysis using advanced sequencing techniques",
+              "Post-test counseling to interpret results and plan next steps"
+            ]
+          },
+          {
+            heading: "Personalized Prevention and Screening",
+            content: "Positive genetic test results enable tailored prevention strategies:",
+            type: "highlight",
+            items: [
+              "Enhanced screening protocols with earlier and more frequent testing",
+              "Prophylactic surgeries for high-risk individuals",
+              "Chemoprevention medications to reduce cancer risk",
+              "Lifestyle modifications targeted to specific genetic risks",
+              "Family cascade testing to identify at-risk relatives"
+            ]
+          }
+        ],
+        
+        conclusion: "Genetic testing represents a powerful tool in cancer prevention and early detection. Dr. Namratha Sai Reddy emphasizes that knowledge is power—understanding your genetic risk allows for proactive measures that can save lives and provide peace of mind for families.",
+        
+        keyTakeaways: [
+          "5-10% of cancers are hereditary with identifiable genetic causes",
+          "Genetic counseling is essential before and after testing",
+          "Positive results enable personalized prevention strategies",
+          "Family testing can identify other at-risk relatives",
+          "Genetic information guides treatment decisions"
+        ]
+      }
+    },
+    "19": {
+      title: "Palliative Care and Pain Management: Enhancing Quality of Life During Cancer Treatment",
+      category: "Palliative Care",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 22, 2025",
+      readTime: "8 min read",
+      image: blogPalliativeCareAugust,
+      content: {
+        introduction: "Palliative care is an essential component of comprehensive cancer treatment that focuses on improving quality of life for patients and families. Dr. Namratha Sai Reddy explains how modern palliative care approaches can significantly enhance comfort and well-being throughout the cancer journey.",
+        
+        sections: [
+          {
+            heading: "Understanding Palliative Care",
+            content: "Palliative care is specialized medical care focused on providing relief from symptoms and stress of serious illness:",
+            type: "info",
+            items: [
+              "Can be provided alongside curative treatment at any stage",
+              "Focuses on symptom management and quality of life",
+              "Involves a multidisciplinary team approach",
+              "Addresses physical, emotional, and spiritual needs",
+              "Supports family members and caregivers"
+            ]
+          },
+          {
+            heading: "Comprehensive Pain Management",
+            content: "Dr. Namratha Sai Reddy employs multimodal approaches to effectively manage cancer-related pain:",
+            type: "success",
+            items: [
+              "WHO pain ladder: Starting with non-opioids and escalating as needed",
+              "Long-acting medications for baseline pain control",
+              "Breakthrough pain medications for sudden pain episodes",
+              "Non-pharmacological approaches: massage, acupuncture, physical therapy",
+              "Interventional procedures: nerve blocks and implantable devices"
+            ]
+          },
+          {
+            heading: "Managing Treatment Side Effects",
+            content: "Effective symptom management improves treatment tolerance and quality of life:",
+            type: "warning",
+            items: [
+              "Nausea and vomiting: Antiemetics and dietary modifications",
+              "Fatigue: Energy conservation and gentle exercise",
+              "Neuropathy: Medications and protective measures",
+              "Mouth sores: Oral care protocols and protective medications",
+              "Skin reactions: Specialized skincare and barrier creams"
+            ]
+          },
+          {
+            heading: "Emotional and Spiritual Support",
+            content: "Addressing psychological and spiritual needs is crucial for comprehensive care:",
+            type: "highlight",
+            items: [
+              "Individual and family counseling services",
+              "Spiritual care and chaplaincy services",
+              "Anxiety and depression management",
+              "Coping strategies and stress reduction techniques",
+              "End-of-life planning and advance directives"
+            ]
+          }
+        ],
+        
+        conclusion: "Palliative care is not about giving up hope—it's about living as well as possible with cancer. Dr. Namratha Sai Reddy believes that excellent palliative care enhances the effectiveness of cancer treatment and helps patients and families navigate their journey with dignity and comfort.",
+        
+        keyTakeaways: [
+          "Palliative care complements curative treatment at any stage",
+          "Multimodal pain management provides optimal relief",
+          "Symptom management improves treatment tolerance",
+          "Emotional and spiritual support are essential components",
+          "Early palliative care improves quality of life and outcomes"
+        ]
+      }
+    },
+    "20": {
+      title: "Breakthrough Advances in Chemotherapy: Targeted Therapies and Personalized Medicine",
+      category: "Treatment Advances",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 25, 2025",
+      readTime: "9 min read",
+      image: blogChemotherapyAdvancesAugust,
+      content: {
+        introduction: "Chemotherapy has evolved dramatically from the broad-spectrum treatments of the past to today's sophisticated, targeted approaches. Dr. Namratha Sai Reddy explores how personalized medicine and targeted therapies are revolutionizing cancer treatment with improved efficacy and reduced side effects.",
+        
+        sections: [
+          {
+            heading: "Targeted Therapy Revolution",
+            content: "Unlike traditional chemotherapy, targeted therapies specifically attack cancer cells while sparing healthy tissue:",
+            type: "success",
+            items: [
+              "Tyrosine kinase inhibitors for specific cancer pathways",
+              "Monoclonal antibodies targeting cancer cell proteins",
+              "Hormone receptor blockers for hormone-sensitive cancers",
+              "PARP inhibitors for BRCA-mutated cancers",
+              "CDK4/6 inhibitors for hormone receptor-positive breast cancer"
+            ]
+          },
+          {
+            heading: "Precision Medicine and Biomarker Testing",
+            content: "Dr. Namratha Sai Reddy emphasizes the importance of molecular testing to guide treatment selection:",
+            type: "info",
+            items: [
+              "Tumor genetic profiling to identify actionable mutations",
+              "PD-L1 expression testing for immunotherapy eligibility",
+              "Microsatellite instability (MSI) testing",
+              "HER2 testing for targeted therapy selection",
+              "Liquid biopsies for real-time monitoring"
+            ]
+          },
+          {
+            heading: "Combination Therapy Strategies",
+            content: "Modern cancer treatment often involves combining different therapeutic approaches:",
+            type: "highlight",
+            items: [
+              "Chemotherapy plus targeted therapy for enhanced efficacy",
+              "Immunotherapy combinations for synergistic effects",
+              "Sequential therapy based on resistance patterns",
+              "Maintenance therapy to prevent recurrence",
+              "Neoadjuvant therapy to shrink tumors before surgery"
+            ]
+          },
+          {
+            heading: "Managing Side Effects with Supportive Care",
+            content: "Advanced supportive care measures minimize treatment-related side effects:",
+            type: "warning",
+            benefits: [
+              "Prophylactic antiemetics prevent nausea and vomiting",
+              "Growth factor support maintains blood counts",
+              "Oral care protocols prevent mucositis",
+              "Targeted hydration and electrolyte management"
+            ],
+            sideEffects: [
+              "Fatigue and weakness (manageable with energy conservation)",
+              "Skin and nail changes (preventable with proper care)",
+              "Peripheral neuropathy (monitored and treated early)",
+              "Digestive issues (controlled with medications and diet)"
+            ]
+          }
+        ],
+        
+        conclusion: "The future of chemotherapy lies in personalized treatment approaches that maximize effectiveness while minimizing toxicity. Dr. Namratha Sai Reddy ensures that each patient receives the most appropriate therapy based on their individual cancer characteristics and overall health status.",
+        
+        keyTakeaways: [
+          "Targeted therapies offer improved efficacy with fewer side effects",
+          "Biomarker testing guides personalized treatment selection",
+          "Combination strategies enhance treatment effectiveness",
+          "Advanced supportive care minimizes treatment toxicity",
+          "Precision medicine is the future of cancer treatment"
+        ]
+      }
+    },
+    "21": {
+      title: "Cancer Survivor Stories: Inspiring Journeys of Hope, Healing, and Recovery",
+      category: "Survivor Stories",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 28, 2025",
+      readTime: "7 min read",
+      image: blogSurvivorStoriesAugust,
+      content: {
+        introduction: "Every cancer survivor has a unique story of courage, resilience, and hope. Dr. Namratha Sai Reddy shares inspiring patient journeys that demonstrate the power of modern cancer treatment, strong support systems, and the indomitable human spirit in overcoming this challenging disease.",
+        
+        sections: [
+          {
+            heading: "Sarah's Breast Cancer Victory",
+            content: "At 42, Sarah discovered a lump during self-examination. Her journey with Dr. Namratha Sai Reddy shows the power of early detection:",
+            type: "success",
+            items: [
+              "Stage II breast cancer diagnosed through prompt screening",
+              "Neoadjuvant chemotherapy reduced tumor size significantly",
+              "Successful lumpectomy with clear margins",
+              "Targeted therapy based on HER2-positive status",
+              "Five years cancer-free with regular monitoring"
+            ]
+          },
+          {
+            heading: "Michael's Lung Cancer Transformation",
+            content: "A 58-year-old former smoker, Michael's diagnosis led to a complete life transformation:",
+            type: "highlight",
+            items: [
+              "Advanced lung cancer treated with immunotherapy",
+              "Remarkable response with tumor shrinkage in 3 months",
+              "Complete lifestyle change including smoking cessation",
+              "Strong family support throughout treatment",
+              "Now advocates for lung cancer screening and prevention"
+            ]
+          },
+          {
+            heading: "Elena's Pediatric Cancer Triumph",
+            content: "At age 16, Elena faced acute lymphoblastic leukemia with remarkable courage:",
+            type: "info",
+            items: [
+              "Aggressive treatment protocol with chemotherapy",
+              "Maintained academic performance during treatment",
+              "Strong peer support network at school",
+              "Complete remission achieved within one year",
+              "Now studying to become an oncology nurse"
+            ]
+          },
+          {
+            heading: "Robert's Prostate Cancer Success",
+            content: "Dr. Namratha Sai Reddy helped Robert navigate prostate cancer treatment while maintaining quality of life:",
+            type: "warning",
+            items: [
+              "Early-stage prostate cancer detected through screening",
+              "Robotic prostatectomy with nerve-sparing technique",
+              "Rapid recovery with minimal side effects",
+              "Return to normal activities within 6 weeks",
+              "Advocates for men's health screening awareness"
+            ]
+          }
+        ],
+        
+        conclusion: "These inspiring stories represent just a few of the many patients Dr. Namratha Sai Reddy has had the privilege to treat. Each journey is unique, but they all share common elements: early detection, appropriate treatment, strong support systems, and unwavering hope. These survivors remind us that cancer is not the end of the story—it's often the beginning of a new chapter filled with appreciation, purpose, and renewed life.",
+        
+        keyTakeaways: [
+          "Early detection significantly improves treatment outcomes",
+          "Modern treatments offer hope even for advanced cancers",
+          "Strong support systems are crucial for healing",
+          "Survivors often become advocates for prevention and awareness",
+          "Cancer treatment preserves and enhances quality of life"
+        ]
+      }
+    },
+    "22": {
+      title: "Latest Cancer Research Breakthroughs: Revolutionary Discoveries Shaping the Future",
+      category: "Research & Innovation",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 30, 2025",
+      readTime: "10 min read",
+      image: blogResearchBreakthroughsAugust,
+      content: {
+        introduction: "Cancer research is advancing at an unprecedented pace, with groundbreaking discoveries offering new hope for patients worldwide. Dr. Namratha Sai Reddy reviews the most promising recent breakthroughs that are revolutionizing cancer prevention, diagnosis, and treatment.",
+        
+        sections: [
+          {
+            heading: "Artificial Intelligence in Cancer Detection",
+            content: "AI technology is transforming cancer diagnosis with unprecedented accuracy and speed:",
+            type: "highlight",
+            items: [
+              "Machine learning algorithms detect cancer in imaging earlier than human radiologists",
+              "AI-powered pathology improves diagnostic accuracy by 15-20%",
+              "Predictive models identify patients at high risk for cancer development",
+              "Real-time analysis during surgery guides tumor removal",
+              "Automated screening programs increase detection rates in underserved populations"
+            ]
+          },
+          {
+            heading: "Liquid Biopsy Advances",
+            content: "Blood-based cancer detection is revolutionizing how we monitor and treat cancer:",
+            type: "success",
+            items: [
+              "Circulating tumor DNA detection for minimal residual disease",
+              "Multi-cancer early detection blood tests",
+              "Real-time monitoring of treatment response",
+              "Resistance mutation detection without tissue biopsy",
+              "Companion diagnostics for targeted therapy selection"
+            ]
+          },
+          {
+            heading: "Next-Generation Immunotherapy",
+            content: "Dr. Namratha Sai Reddy highlights emerging immunotherapy approaches showing remarkable promise:",
+            type: "info",
+            items: [
+              "Bispecific antibodies that engage multiple immune pathways",
+              "Tumor-infiltrating lymphocyte (TIL) therapy expansion",
+              "Cancer vaccines using neoantigen identification",
+              "Combination checkpoint inhibitor strategies",
+              "Adoptive cell therapy for solid tumors"
+            ]
+          },
+          {
+            heading: "Precision Oncology Developments",
+            content: "Personalized treatment approaches are becoming more sophisticated and accessible:",
+            type: "warning",
+            items: [
+              "Whole genome sequencing identifies novel therapeutic targets",
+              "Pharmacogenomics optimizes drug dosing and selection",
+              "Tumor organoids test treatment responses before patient exposure",
+              "CRISPR gene editing corrects cancer-causing mutations",
+              "Epigenetic therapies reverse cancer-promoting gene silencing"
+            ]
+          }
+        ],
+        
+        conclusion: "The pace of cancer research has never been faster, and the potential for transformative treatments has never been greater. Dr. Namratha Sai Reddy remains committed to bringing these breakthrough discoveries to her patients as quickly and safely as possible, ensuring that cutting-edge research translates into improved outcomes and hope for cancer patients.",
+        
+        keyTakeaways: [
+          "AI is revolutionizing cancer detection and diagnosis",
+          "Liquid biopsies enable non-invasive cancer monitoring",
+          "Next-generation immunotherapies show unprecedented promise",
+          "Precision oncology provides truly personalized treatment",
+          "Research advances are rapidly translating to patient care"
+        ]
+      }
+    },
+    "23": {
+      title: "Minimally Invasive Cancer Surgery: Advanced Techniques for Better Outcomes",
+      category: "Surgical Innovation",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 31, 2025",
+      readTime: "8 min read",
+      image: blogSurgicalInnovationsAugust,
+      content: {
+        introduction: "Surgical oncology has been transformed by minimally invasive techniques that offer patients faster recovery, less pain, and excellent cancer outcomes. Dr. Namratha Sai Reddy explores how these advanced surgical approaches are revolutionizing cancer treatment while preserving quality of life.",
+        
+        sections: [
+          {
+            heading: "Robotic Surgery Advantages",
+            content: "Robotic-assisted surgery provides surgeons with unprecedented precision and patients with superior outcomes:",
+            type: "success",
+            items: [
+              "3D high-definition visualization with 10x magnification",
+              "Tremor filtration and enhanced dexterity",
+              "Smaller incisions result in less scarring",
+              "Reduced blood loss and shorter hospital stays",
+              "Faster return to normal activities and work"
+            ]
+          },
+          {
+            heading: "Laparoscopic Cancer Surgery",
+            content: "Dr. Namratha Sai Reddy utilizes advanced laparoscopic techniques for various cancer types:",
+            type: "info",
+            items: [
+              "Colorectal cancer resection with preserved function",
+              "Liver resection for primary and metastatic tumors",
+              "Gastric cancer surgery with lymph node preservation",
+              "Gynecologic cancer procedures with minimal morbidity",
+              "Thoracoscopic lung resections for early-stage cancers"
+            ]
+          },
+          {
+            heading: "Image-Guided Surgery",
+            content: "Real-time imaging ensures complete tumor removal while preserving healthy tissue:",
+            type: "highlight",
+            items: [
+              "Intraoperative MRI for brain tumor surgery",
+              "Fluorescence-guided surgery identifies cancer cells",
+              "Ultrasound guidance for precise tumor localization",
+              "Frozen section analysis confirms complete removal",
+              "Navigation systems map critical anatomical structures"
+            ]
+          },
+          {
+            heading: "Recovery and Quality of Life Benefits",
+            content: "Minimally invasive approaches significantly improve the surgical experience:",
+            type: "warning",
+            benefits: [
+              "Reduced postoperative pain and narcotic requirements",
+              "Shorter hospital stays (often same-day discharge)",
+              "Faster return to normal activities and work",
+              "Lower risk of infection and complications",
+              "Preserved organ function and cosmetic outcomes"
+            ],
+            considerations: [
+              "Not all tumors are suitable for minimally invasive approach",
+              "Complex cases may require conversion to open surgery",
+              "Surgeon experience is crucial for optimal outcomes",
+              "Patient selection depends on tumor characteristics"
+            ]
+          }
+        ],
+        
+        conclusion: "Minimally invasive cancer surgery represents the perfect marriage of cutting-edge technology and surgical expertise. Dr. Namratha Sai Reddy is committed to offering these advanced techniques to appropriate patients, ensuring they receive the most effective cancer treatment with the best possible quality of life outcomes.",
+        
+        keyTakeaways: [
+          "Robotic surgery offers unprecedented precision and visualization",
+          "Minimally invasive techniques reduce recovery time significantly",
+          "Image guidance ensures complete tumor removal",
+          "Quality of life benefits extend well beyond surgery",
+          "Proper patient selection is crucial for optimal outcomes"
+        ]
+      }
+    },
+    "24": {
+      title: "Integrative Cancer Medicine: Combining Traditional and Complementary Therapies",
+      category: "Integrative Medicine",
+      author: "Dr. Namratha Sai Reddy",
+      publishDate: "August 31, 2025",
+      readTime: "9 min read",
+      image: blogIntegrativeMedicineAugust,
+      content: {
+        introduction: "Integrative cancer medicine combines the best of conventional medical treatments with evidence-based complementary therapies to treat the whole person, not just the cancer. Dr. Namratha Sai Reddy explains how this comprehensive approach can enhance treatment outcomes and improve quality of life throughout the cancer journey.",
+        
+        sections: [
+          {
+            heading: "Mind-Body Medicine Approaches",
+            content: "The connection between mind and body is powerful in cancer healing and recovery:",
+            type: "success",
+            items: [
+              "Meditation and mindfulness practices reduce stress and anxiety",
+              "Yoga therapy improves flexibility, strength, and emotional well-being",
+              "Guided imagery helps manage pain and treatment side effects",
+              "Breathing exercises enhance relaxation and sleep quality",
+              "Progressive muscle relaxation reduces treatment-related tension"
+            ]
+          },
+          {
+            heading: "Nutritional and Herbal Support",
+            content: "Dr. Namratha Sai Reddy incorporates evidence-based nutritional interventions alongside conventional treatment:",
+            type: "info",
+            items: [
+              "Anti-inflammatory diets support immune function",
+              "Targeted supplementation addresses specific deficiencies",
+              "Herbal medicines with proven anti-cancer properties",
+              "Probiotics maintain gut health during treatment",
+              "Hydration protocols optimize treatment effectiveness"
+            ]
+          },
+          {
+            heading: "Physical Therapies and Movement",
+            content: "Gentle physical interventions support healing and maintain function during treatment:",
+            type: "highlight",
+            items: [
+              "Acupuncture for nausea, pain, and neuropathy management",
+              "Massage therapy reduces anxiety and improves circulation",
+              "Physical therapy maintains strength and mobility",
+              "Occupational therapy adapts daily activities",
+              "Exercise prescriptions tailored to treatment phases"
+            ]
+          },
+          {
+            heading: "Safety and Evidence-Based Practice",
+            content: "Integrative approaches must be carefully coordinated with conventional treatment:",
+            type: "warning",
+            items: [
+              "All complementary therapies reviewed for drug interactions",
+              "Only evidence-based interventions are recommended",
+              "Regular monitoring ensures safety and effectiveness",
+              "Open communication between all healthcare providers",
+              "Patient education about potential benefits and risks"
+            ]
+          }
+        ],
+        
+        conclusion: "Integrative cancer medicine recognizes that healing involves more than just treating cancer cells—it involves nurturing the whole person. Dr. Namratha Sai Reddy believes that combining the best of conventional medicine with carefully selected complementary therapies can enhance treatment outcomes, reduce side effects, and improve overall quality of life for cancer patients.",
+        
+        keyTakeaways: [
+          "Integrative medicine treats the whole person, not just cancer",
+          "Mind-body approaches significantly reduce stress and anxiety",
+          "Evidence-based complementary therapies enhance conventional treatment",
+          "Safety requires careful coordination between all therapies",
+          "Patient education is essential for optimal integrative care"
         ]
       }
     }
