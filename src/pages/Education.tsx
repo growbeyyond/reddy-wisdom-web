@@ -30,6 +30,12 @@ import colorectalCancerImg from '@/assets/blog-colorectal-cancer.jpg';
 import survivorshipImg from '@/assets/blog-survivorship.jpg';
 import precisionMedicineImg from '@/assets/blog-precision-medicine.jpg';
 import preventionLifestyleImg from '@/assets/blog-prevention-lifestyle.jpg';
+import redMeatWhiteMeatImg from '@/assets/blog-red-meat-white-meat.jpg';
+import whiteDischargeHealthImg from '@/assets/blog-white-discharge-health.jpg';
+import vapingHookahCancerImg from '@/assets/blog-vaping-hookah-cancer.jpg';
+import birthPillsCancerImg from '@/assets/blog-birth-pills-cancer.jpg';
+import russianVaccineImg from '@/assets/blog-russian-vaccine.jpg';
+import vitaminDCancerImg from '@/assets/blog-vitamin-d-cancer.jpg';
 
 const Education = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -194,6 +200,72 @@ const Education = () => {
       image: immunotherapyImg,
       featured: true,
       trending: true
+    },
+    {
+      id: 15,
+      title: "Red Meat vs White Meat: Understanding Cancer Risk and Making Healthier Choices",
+      excerpt: "Expert analysis by Dr. Namratha Sai Reddy on how different meat types affect cancer risk, with evidence-based dietary recommendations for optimal health.",
+      category: "Prevention",
+      readTime: "8 min read",
+      publishDate: "August 15, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: redMeatWhiteMeatImg,
+      trending: true
+    },
+    {
+      id: 16,
+      title: "White Discharge in Women: When to Worry About Cancer Signs",
+      excerpt: "Dr. Namratha Sai Reddy explains normal vs concerning vaginal discharge patterns and when white discharge might indicate gynecological cancers.",
+      category: "Prevention",
+      readTime: "7 min read",
+      publishDate: "August 18, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: whiteDischargeHealthImg,
+      featured: true
+    },
+    {
+      id: 17,
+      title: "Vaping and Hookah: Hidden Cancer Risks You Need to Know",
+      excerpt: "Comprehensive guide by Dr. Namratha Sai Reddy on how vaping, e-cigarettes, and hookah smoking increase cancer risk despite marketing claims.",
+      category: "Prevention",
+      readTime: "9 min read",
+      publishDate: "August 20, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: vapingHookahCancerImg,
+      trending: true
+    },
+    {
+      id: 18,
+      title: "Birth Control Pills and Cancer Risk: What Every Woman Should Know",
+      excerpt: "Dr. Namratha Sai Reddy examines the complex relationship between hormonal contraceptives and cancer risk, providing evidence-based guidance for women.",
+      category: "Prevention",
+      readTime: "10 min read",
+      publishDate: "August 22, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: birthPillsCancerImg,
+      featured: true
+    },
+    {
+      id: 19,
+      title: "Russian Cancer Vaccine Breakthrough: Revolutionary Sputnik-V Cancer Treatment",
+      excerpt: "Dr. Namratha Sai Reddy analyzes Russia's innovative cancer vaccine developments and their potential impact on global cancer treatment protocols.",
+      category: "Treatment Updates",
+      readTime: "11 min read",
+      publishDate: "August 25, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: russianVaccineImg,
+      trending: true
+    },
+    {
+      id: 20,
+      title: "Vitamin D Deficiency and Cancer Risk: The Sunshine Vitamin Connection",
+      excerpt: "Dr. Namratha Sai Reddy explores how vitamin D deficiency increases cancer risk and provides actionable strategies for optimal vitamin D levels.",
+      category: "Prevention",
+      readTime: "8 min read",
+      publishDate: "August 28, 2025",
+      author: "Dr. Namratha Sai Reddy",
+      image: vitaminDCancerImg,
+      featured: true
     }
   ];
 
