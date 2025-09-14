@@ -16,7 +16,7 @@ interface BreadcrumbsProps {
 
 const routeLabels: Record<string, string> = {
   "/home": "Home",
-  "/about": "About Dr. Doe",
+  "/about": "About Dr. Namratha Sai Reddy",
   "/services": "Our Services",
   "/education": "Patient Education",
   "/contact": "Contact Us",
