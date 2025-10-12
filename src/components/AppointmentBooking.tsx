@@ -60,8 +60,8 @@ const AppointmentBooking = () => {
     try {
       const { error } = await supabase.from('appointments').insert({
         patient_name: data.patient_name,
-        patient_email: data.patient_email,
-        patient_phone: data.patient_phone || null,
+        email: data.patient_email,
+        phone: data.patient_phone || '',
         appointment_date: format(data.appointment_date, 'yyyy-MM-dd'),
         appointment_time: data.appointment_time,
         appointment_type: data.appointment_type,

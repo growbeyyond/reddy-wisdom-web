@@ -182,7 +182,7 @@ const TreatmentChecklist = () => {
         .insert({
           patient_email: email,
           checklist_type: selectedType,
-          checklist_data: checklistItems,
+          checklist_items: checklistItems,
           completed_items: [],
         })
         .select()
@@ -192,7 +192,7 @@ const TreatmentChecklist = () => {
 
       setChecklists(prev => [...prev, {
         ...data,
-        checklist_data: data.checklist_data as unknown as ChecklistItem[],
+        checklist_data: data.checklist_items as unknown as ChecklistItem[],
         completed_items: data.completed_items as unknown as string[]
       } as TreatmentChecklistData]);
       
@@ -265,7 +265,7 @@ const TreatmentChecklist = () => {
 
       setChecklists((data || []).map(item => ({
         ...item,
-        checklist_data: item.checklist_data as unknown as ChecklistItem[],
+        checklist_data: item.checklist_items as unknown as ChecklistItem[],
         completed_items: item.completed_items as unknown as string[]
       })) as TreatmentChecklistData[]);
     } catch (error) {

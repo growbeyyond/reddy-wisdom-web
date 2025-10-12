@@ -117,7 +117,7 @@ const DocumentUpload = () => {
           .from('patient_documents')
           .insert({
             patient_email: email,
-            document_name: file.name,
+            file_name: file.name,
             document_type: documentType,
             file_path: filePath,
             file_size: file.size,
