@@ -14,7 +14,198 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      appointments: {
+        Row: {
+          appointment_date: string
+          appointment_time: string
+          appointment_type: string
+          created_at: string
+          email: string
+          id: string
+          patient_name: string
+          phone: string
+          reason: string | null
+          status: string
+        }
+        Insert: {
+          appointment_date: string
+          appointment_time: string
+          appointment_type: string
+          created_at?: string
+          email: string
+          id?: string
+          patient_name: string
+          phone: string
+          reason?: string | null
+          status?: string
+        }
+        Update: {
+          appointment_date?: string
+          appointment_time?: string
+          appointment_type?: string
+          created_at?: string
+          email?: string
+          id?: string
+          patient_name?: string
+          phone?: string
+          reason?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string
+          status: string
+          subject: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone: string
+          status?: string
+          subject: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string
+          status?: string
+          subject?: string
+        }
+        Relationships: []
+      }
+      newsletter_subscriptions: {
+        Row: {
+          email: string
+          id: string
+          name: string | null
+          status: string
+          subscribed_at: string
+        }
+        Insert: {
+          email: string
+          id?: string
+          name?: string | null
+          status?: string
+          subscribed_at?: string
+        }
+        Update: {
+          email?: string
+          id?: string
+          name?: string | null
+          status?: string
+          subscribed_at?: string
+        }
+        Relationships: []
+      }
+      patient_documents: {
+        Row: {
+          document_type: string
+          file_name: string
+          file_path: string
+          file_size: number
+          id: string
+          patient_email: string
+          uploaded_at: string
+        }
+        Insert: {
+          document_type: string
+          file_name: string
+          file_path: string
+          file_size: number
+          id?: string
+          patient_email: string
+          uploaded_at?: string
+        }
+        Update: {
+          document_type?: string
+          file_name?: string
+          file_path?: string
+          file_size?: number
+          id?: string
+          patient_email?: string
+          uploaded_at?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string
+          full_name: string | null
+          id: string
+          phone: string | null
+          role: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          full_name?: string | null
+          id?: string
+          phone?: string | null
+          role?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      treatment_checklists: {
+        Row: {
+          checklist_items: Json
+          checklist_type: string
+          completed_items: string[]
+          created_at: string
+          id: string
+          is_completed: boolean
+          patient_email: string
+          updated_at: string
+        }
+        Insert: {
+          checklist_items: Json
+          checklist_type: string
+          completed_items?: string[]
+          created_at?: string
+          id?: string
+          is_completed?: boolean
+          patient_email: string
+          updated_at?: string
+        }
+        Update: {
+          checklist_items?: Json
+          checklist_type?: string
+          completed_items?: string[]
+          created_at?: string
+          id?: string
+          is_completed?: boolean
+          patient_email?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
